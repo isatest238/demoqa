@@ -36,28 +36,25 @@ public class WebTable_Test {
 
         // declaram primul field FirtsName
         WebElement FirstNameField = driver.findElement(By.id("firstName"));
-        String FirstNameValue = "Isabela";
+        String FirstNameValue = "Isabela1";
         FirstNameField.sendKeys(FirstNameValue);
 
         // declaram LastName field
         WebElement LastNameField = driver.findElement(By.id("lastName"));
-        String LastNameValue = "Vulpe";
+        String LastNameValue = "Vulpe1";
         LastNameField.sendKeys(LastNameValue);
-
-
-
 
         // declaram Email field
         WebElement EmailField = driver.findElement(By.id("userEmail"));
-        String EmailValue = "isabela.vulpe@endava.com";
+        String EmailValue = "isabela1.vulpe@endava.com";
         EmailField.sendKeys(EmailValue);
 
         //declaram Age field
         WebElement AgeField = driver.findElement(By.id("age"));
-        String AgeValue = "20";
+        String AgeValue = "27";
         AgeField.sendKeys(AgeValue);
 
-        // declaram Salary field
+                // declaram Salary field
         WebElement SalaryField = driver.findElement(By.id("salary"));
         String SalaryValue = "250000";
         SalaryField.sendKeys(SalaryValue);
@@ -70,5 +67,9 @@ public class WebTable_Test {
         // declaram Submit button field
         WebElement SubmitButtonField = driver.findElement(By.id("submit"));
         SubmitButtonField.click();
+
+
+
+
     }
 }
