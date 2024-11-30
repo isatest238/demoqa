@@ -39,12 +39,13 @@ public class WebTable_Test {
         String FirstNameValue = "Isabela";
         FirstNameField.sendKeys(FirstNameValue);
 
-
-
         // declaram LastName field
         WebElement LastNameField = driver.findElement(By.id("lastName"));
         String LastNameValue = "Vulpe";
         LastNameField.sendKeys(LastNameValue);
+
+
+
 
         // declaram Email field
         WebElement EmailField = driver.findElement(By.id("userEmail"));
