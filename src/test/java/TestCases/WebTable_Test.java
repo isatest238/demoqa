@@ -21,11 +21,11 @@ public class WebTable_Test {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,400)");
 
-        //declaram un element
+        //declaram un element si dam click pe el
         WebElement ElementsField = driver.findElement(By.xpath("//h5[text()='Elements']"));
         ElementsField.click();
 
-        //declaram al doilea element
+        //declaram al doilea element si dam click pe el
         WebElement Element2Field = driver.findElement(By.xpath("//span[text()='Web Tables']"));
         Element2Field.click();
 
