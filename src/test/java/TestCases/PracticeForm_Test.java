@@ -1,4 +1,57 @@
 package TestCases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
 public class PracticeForm_Test {
+    public WebDriver driver;
+
+    @Test
+    public void automationMethod() {
+        //deschidem un Chrome browser
+        driver = new ChromeDriver();
+        //accesam o pagina web
+        driver.get("https://demoqa.com/");
+        // facem browserul in modul maximized
+        driver.manage().window().maximize();
+        // facem un scroll
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,400)");
+
+        //declaram 'Forms' element si dam click pe el
+        WebElement FormElement = driver.findElement(By.xpath("//h5[text()='Forms']"));
+        FormElement.click();
+
+        // declaram 'Practice Form' element si dam click pe el
+        WebElement PracticeFormElement = driver.findElement(By.xpath("//span[text()='Practice Form']"));
+        PracticeFormElement.click();
+
+        // declaram FirstName field si introducem valoarea
+        WebElement FirstNameElement = driver.findElement(By.id("firstName"));
+        String FirstNameValue = "Isabela";
+        FirstNameElement.sendKeys(FirstNameValue);
+
+        //LastName
+        WebElement LastNameElement = driver.findElement(By.id("lastName"));
+        String LastNameValue = "Popescu";
+        LastNameElement.sendKeys(LastNameValue);
+
+        // EmailAddress
+        WebElement EmailAddressElement = driver.findElement(By.id("userEmail"));
+        String EmailAddresValue = "isabela.popescu@gmail.com";
+        EmailAddressElement.sendKeys(EmailAddresValue);
+
+        //PhoneNumber
+        WebElement PhoneNumberElement = driver.findElement(By.cssSelector("input[placeholder='Mobile Number']"));
+        String PhoneNumberValue = "0746832902";
+        PhoneNumberElement.sendKeys(PhoneNumberValue);
+
+        // Picture
+        WebElement PictureElement = driver.findElement(By.id("uploadPicture"));
+
+    }
 }
