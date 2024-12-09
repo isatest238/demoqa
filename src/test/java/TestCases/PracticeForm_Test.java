@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import java.io.File;
+
 public class PracticeForm_Test {
     public WebDriver driver;
 
@@ -50,8 +52,10 @@ public class PracticeForm_Test {
         String PhoneNumberValue = "0746832902";
         PhoneNumberElement.sendKeys(PhoneNumberValue);
 
-        // Picture
+        // Picture - ''Choose File'' button - upload a picture
         WebElement PictureElement = driver.findElement(By.id("uploadPicture"));
+        File file = new File("src/test/resources/pic_automation.png");
+        PictureElement.sendKeys(file.getAbsolutePath());
 
     }
 }
