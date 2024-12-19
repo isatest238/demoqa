@@ -1,9 +1,6 @@
 package TestCases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
@@ -63,13 +60,24 @@ public class PracticeForm_Test {
         WebElement otherElement = driver.findElement(By.xpath("//label[@for='gender-radio-3']"));
 
         String genderValue = "Other";
-        if (genderValue.equals("Male")) {
+        if (maleElement.getText().equals(genderValue)) {
             maleElement.click();
-        } else if (genderValue.equals("Female")) {
+        } else if (femaleElement.getText().equals(genderValue)) {
             femaleElement.click();
-        } else if (genderValue.equals("Other")){
+        } else if (otherElement.getText().equals(genderValue)){
             otherElement.click();
         }
 
+        WebElement subjectsElement = driver.findElement(By.id("subjectsInput"));
+        String subjectsValue = "Social Studies";
+        subjectsElement.sendKeys(subjectsValue);
+        subjectsElement.sendKeys(Keys.ENTER);
+
+        WebElement stateElement = driver.findElement(By.id("react-select-3-input"));
+
+        js.executeScript("window.scrollBy(0,400)");
+        js.executeScript("arguments[0].click();", stateElement);
+        stateElement.sendKeys("NCR");
+        stateElement.sendKeys(Keys.ENTER);
     }
 }
