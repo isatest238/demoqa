@@ -37,7 +37,7 @@ public class Elements_Buttons {
         js.executeScript("window.scrollBy(0,400)");
 
         //  Right click on "Right Click Me" button
-        WebElement rightClickMeElement = driver.findElement(By.xpath("//button[text()='Double Click Me']"));
+        WebElement rightClickMeElement = driver.findElement(By.xpath("//button[text()='Right Click Me']"));
         rightClickMeElement.click();
         actions.contextClick(rightClickMeElement).perform();
 
