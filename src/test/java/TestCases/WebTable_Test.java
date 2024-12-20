@@ -54,7 +54,7 @@ public class WebTable_Test {
         String AgeValue = "27";
         AgeField.sendKeys(AgeValue);
 
-                // declaram Salary field
+        // declaram Salary field
         WebElement SalaryField = driver.findElement(By.id("salary"));
         String SalaryValue = "250000";
         SalaryField.sendKeys(SalaryValue);

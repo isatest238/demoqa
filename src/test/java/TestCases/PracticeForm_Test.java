@@ -10,7 +10,7 @@ public class PracticeForm_Test {
     public WebDriver driver;
 
     @Test
-    public void automationMethod() {
+    public void automationMethod1() {
         //deschidem un Chrome browser
         driver = new ChromeDriver();
         //accesam o pagina web
