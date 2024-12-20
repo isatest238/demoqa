@@ -67,17 +67,23 @@ public class PracticeForm_Test {
         } else if (otherElement.getText().equals(genderValue)){
             otherElement.click();
         }
-
+        // Subjects input selection
         WebElement subjectsElement = driver.findElement(By.id("subjectsInput"));
         String subjectsValue = "Social Studies";
         subjectsElement.sendKeys(subjectsValue);
         subjectsElement.sendKeys(Keys.ENTER);
 
+        // state element
         WebElement stateElement = driver.findElement(By.id("react-select-3-input"));
-
         js.executeScript("window.scrollBy(0,400)");
         js.executeScript("arguments[0].click();", stateElement);
         stateElement.sendKeys("NCR");
         stateElement.sendKeys(Keys.ENTER);
+
+        // Select City
+        WebElement cityElement = driver.findElement(By.id("react-select-4-input"));
+        js.executeScript("arguments[0].click();", cityElement);
+        cityElement.sendKeys("Noida");
+        cityElement.sendKeys(Keys.ENTER);
     }
 }
