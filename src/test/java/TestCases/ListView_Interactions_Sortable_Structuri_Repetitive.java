@@ -8,10 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
 import java.util.List;
 
-public class Interactions_Sortable_Structuri_Repetitive {
+public class ListView_Interactions_Sortable_Structuri_Repetitive {
     public WebDriver driver;
 
     @Test
@@ -33,14 +32,14 @@ public class Interactions_Sortable_Structuri_Repetitive {
         WebElement sortableElement = driver.findElement(By.xpath("//span[text()='Sortable']"));
         sortableElement.click();
 
-        //Lista de Elemente
+        //Lista de Elemente - listare - move element with drag and drop
         List<WebElement> list = driver.findElements(By.xpath("//div[@id='demo-tabpane-list']//div[@class='list-group-item list-group-item-action']"));
         Actions actions = new Actions(driver);
         js.executeScript("window.scrollBy(0,400)");
         for (int i = 0; i <= list.size() - 1; i++) {
             WebElement firstElement = list.get(i);
             WebElement urmatorulElement = list.get(i + 1);
-            System.out.println("Numarul elementului este " + firstElement.getText());
+           // System.out.println("Numarul elementului este " + firstElement.getText());
             //actions.clickAndHold(firstElement).moveToElement(urmatorulElement).release().build().perform();
             actions.clickAndHold(firstElement)
                     .moveToElement(urmatorulElement)
@@ -50,7 +49,7 @@ public class Interactions_Sortable_Structuri_Repetitive {
         }
         try {
             Thread.sleep(1000);
-        }catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
