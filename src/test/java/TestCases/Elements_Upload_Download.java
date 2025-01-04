@@ -37,7 +37,7 @@ public class Elements_Upload_Download {
         File file2 = new File("src/test/resources/file_upload_selenium_java.png");
         chooseFileElement.sendKeys(file2.getAbsolutePath());
 
-        // Download file
+        // Download file ????
         //WebElement downloadElement = driver.findElement(By.id("downloadButton)"));
         //String imageURL = downloadElement.getAttribute("href");
         //driver.get(imageURL);

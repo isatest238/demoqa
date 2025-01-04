@@ -2,7 +2,10 @@ package TestCases;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 import static java.awt.SystemColor.window;
 
@@ -28,6 +31,10 @@ public class WebTable_Test {
         //declaram al doilea element si dam click pe el
         WebElement Element2Field = driver.findElement(By.xpath("//span[text()='Web Tables']"));
         Element2Field.click();
+
+        // tabel - dimensiunea tabelului
+        List<WebElement> tableElement = driver.findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
+        Integer actualTableSize = tableElement.size();
 
         // declaram Add button element
         js.executeScript("window.scrollBy(0,400)");
@@ -67,5 +74,19 @@ public class WebTable_Test {
         // declaram Submit button field
         WebElement SubmitButtonField = driver.findElement(By.id("submit"));
         SubmitButtonField.click();
+
+        //verificare - o noua linie a fost adaugata in tabel comparand size ul tabelului
+        List<WebElement> tableElement1 = driver.findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
+        Integer expectedSizeTable = actualTableSize+1;
+        Assert.assertEquals(tableElement1.size(),expectedSizeTable);
+
+        //validarea elementelor adaugate in tabel in ultima linie
+        String actualTableValue = tableElement1.get(3).getText();
+        Assert.assertTrue(actualTableValue.contains(FirstNameValue));
+        Assert.assertTrue(actualTableValue.contains(LastNameValue));
+        Assert.assertTrue(actualTableValue.contains(EmailValue));
+        Assert.assertTrue(actualTableValue.contains(AgeValue));
+        Assert.assertTrue(actualTableValue.contains(SalaryValue));
     }
+
 }

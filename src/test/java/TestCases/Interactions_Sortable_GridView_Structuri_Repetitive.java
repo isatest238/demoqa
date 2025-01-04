@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class GridView_Interactions_Sortable_Structuri_Repetitive {
+public class Interactions_Sortable_GridView_Structuri_Repetitive {
     public WebDriver driver;
 
     @Test

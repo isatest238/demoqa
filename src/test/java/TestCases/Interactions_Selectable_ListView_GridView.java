@@ -27,7 +27,7 @@ public class Interactions_Selectable_ListView_GridView {
         interactionElement.click();
         js.executeScript("window.scrollBy(0,400)");
 
-        //Click on 'Selectable' meniu option
+        //Click on 'Selectable' meniu option - select all available options from the List
         WebElement selectableElement = driver.findElement(By.xpath("//span[text()='Selectable']"));
         selectableElement.click();
 
@@ -39,7 +39,7 @@ public class Interactions_Selectable_ListView_GridView {
             //System.out.println(listElement.getText());
         }
 
-        // Click on Grid view option
+        // Click on Grid view option - select all available options
         WebElement gridViewElement = driver.findElement(By.id("demo-tab-grid"));
         gridViewElement.click();
 
