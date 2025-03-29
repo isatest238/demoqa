@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class Alerts_TestCase {
+public class Alerts {
     public WebDriver driver;
 
     @Test

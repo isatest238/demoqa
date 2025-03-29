@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-public class Frames_TestCase {
+public class Frames {
     public WebDriver driver;
 
     @Test
@@ -50,10 +50,6 @@ public class Frames_TestCase {
 
         //facem scroll pe orizontal si vertical in cel de al doilea frame
         js.executeScript("window.scrollBy(200,200)");
-
-
-
-
 
     }
 }
