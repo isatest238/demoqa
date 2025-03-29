@@ -1,4 +1,4 @@
-package TestCases;
+package Beginner_Sessions;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -138,8 +138,6 @@ public class PracticeForm_Test {
         String stateAndCity = stateElementValue+ ' ' + cityElementValue;
         String pictureValue = "pic_automation.png";
         String dateOfBirthValue = "04 January,2025";
-        //String hobbiesElementValue = " ";
-
 
         //System.out.println("Name: " + nameValue);
         //System.out.println("State and City " + stateAndCity);
@@ -154,7 +152,6 @@ public class PracticeForm_Test {
         Assert.assertTrue(secondColumnElements.contains(stateAndCity.trim()));
         Assert.assertTrue(secondColumnElements.contains(pictureValue.trim()));
         Assert.assertTrue(secondColumnElements.contains(dateOfBirthValue.trim()));
-        //Assert.assertTrue(secondColumnElements.contains(hobbiesElementValue));
 
 
     }

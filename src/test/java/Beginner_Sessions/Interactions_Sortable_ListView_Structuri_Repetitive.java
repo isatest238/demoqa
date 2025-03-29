@@ -1,4 +1,4 @@
-package TestCases;
+package Beginner_Sessions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -40,7 +40,7 @@ public class Interactions_Sortable_ListView_Structuri_Repetitive {
             WebElement firstElement = list.get(i);
             WebElement urmatorulElement = list.get(i + 1);
            // System.out.println("Numarul elementului este " + firstElement.getText());
-            //actions.clickAndHold(firstElement).moveToElement(urmatorulElement).release().build().perform();
+           //actions.clickAndHold(firstElement).moveToElement(urmatorulElement).release().build().perform();
             actions.clickAndHold(firstElement)
                     .moveToElement(urmatorulElement)
                     .release()

@@ -1,4 +1,4 @@
-package TestCases;
+package Beginner_Sessions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;

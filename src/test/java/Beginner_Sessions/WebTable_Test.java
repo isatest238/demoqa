@@ -1,4 +1,4 @@
-package TestCases;
+package Beginner_Sessions;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -6,8 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
-
-import static java.awt.SystemColor.window;
 
 public class WebTable_Test {
     public WebDriver driver;
