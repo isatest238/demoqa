@@ -50,9 +50,6 @@ public class Alerts {
 
         //se muta focusul pe alerta - overlay ul ca sa interactionam cu ea
         alertsMethods.interactWithAlertsOK();
-//        Alert FirtsAlert = driver.switchTo().alert();
-//        FirtsAlert.accept();
-
 
         //identificam a doua alerta si dam click
         WebElement SecondAlertElement = driver.findElement(By.id("timerAlertButton"));
@@ -61,11 +58,6 @@ public class Alerts {
 
         //definim un explicit wait ca sa astepte dupa alerta
         alertsMethods.interactWithDelayAlert();
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.alertIsPresent());
-
-//        Alert SecondAlert = driver.switchTo().alert();
-//        SecondAlert.accept();
 
 
         javaScriptMethods.scrollMethod(0, 400);
@@ -75,18 +67,13 @@ public class Alerts {
         elementsMethods.clickOnElement(thirdAlertElement);
         alertsMethods.interactWithAlertCancel();
 
-//        Alert thirdAlert = driver.switchTo().alert();
-//        thirdAlert.dismiss();
-
 
         //identificam a patra alerta si dam click pe ea
         WebElement fourthAlertElement = driver.findElement(By.id("promtButton"));
         elementsMethods.clickOnElement(fourthAlertElement);
         alertsMethods.interactWithAlertSendKey();
 
-//        Alert fourthAlert = driver.switchTo().alert();
-//        fourthAlert.sendKeys("Isabela");
-//        fourthAlert.accept();
+
 
     }
 }
