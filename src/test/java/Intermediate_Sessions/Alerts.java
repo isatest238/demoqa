@@ -2,6 +2,7 @@ package Intermediate_Sessions;
 
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
+import Helper_Methods.JavaScript_Methods;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,26 +15,24 @@ public class Alerts {
     public WebDriver driver;
     public Elements_Methods elementsMethods;
     public Alerts_Methods alertsMethods;
+    public JavaScript_Methods javaScriptMethods;
 
     @Test
     public void automationMethod2() {
-        //deschidem un Chrome browser
+
         driver = new ChromeDriver();
-        //accesam o pagina web
         driver.get("https://demoqa.com/");
-
-        //definim un wait implicit pentru un interval maxim de timp - se activeaza dupa fiecare linie in care faci driver find element
+        //definim un wait implicit pentru un interval maxim de timp
+        //se activeaza dupa fiecare linie in care faci driver find element
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-
-
-        // facem browserul in modul maximized
         driver.manage().window().maximize();
-        // facem un scroll
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,400)");
 
         elementsMethods = new Elements_Methods(driver);
         alertsMethods = new Alerts_Methods(driver);
+        javaScriptMethods = new JavaScript_Methods(driver);
+
+        javaScriptMethods.scrollMethod(0, 400);
+
 
         //declaram 'Alerts, Frame & Windows' element si dam click pe el
         WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
@@ -60,9 +59,8 @@ public class Alerts {
         elementsMethods.clickOnElement(SecondAlertElement);
 
 
-
-       //definim un explicit wait ca sa astepte dupa alerta
-        alertsMethods.interactWithDelayAler();
+        //definim un explicit wait ca sa astepte dupa alerta
+        alertsMethods.interactWithDelayAlert();
 //        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 //        wait.until(ExpectedConditions.alertIsPresent());
 
@@ -70,19 +68,22 @@ public class Alerts {
 //        SecondAlert.accept();
 
 
-        js.executeScript("window.scrollBy(0,400)");
+        javaScriptMethods.scrollMethod(0, 400);
+
         //identificam a treia alerta si dam click pe ea
-//        WebElement thirdAlertElement = driver.findElement(By.id("confirmButton"));
-//        thirdAlertElement.click();
-//
+        WebElement thirdAlertElement = driver.findElement(By.id("confirmButton"));
+        elementsMethods.clickOnElement(thirdAlertElement);
+        alertsMethods.interactWithAlertCancel();
+
 //        Alert thirdAlert = driver.switchTo().alert();
 //        thirdAlert.dismiss();
-//
-//
-//        //identificam a patra alerta si dam click pe ea
-//        WebElement fourthAlertElement = driver.findElement(By.id("promtButton"));
-//        fourthAlertElement.click();
-//
+
+
+        //identificam a patra alerta si dam click pe ea
+        WebElement fourthAlertElement = driver.findElement(By.id("promtButton"));
+        elementsMethods.clickOnElement(fourthAlertElement);
+        alertsMethods.interactWithAlertSendKey();
+
 //        Alert fourthAlert = driver.switchTo().alert();
 //        fourthAlert.sendKeys("Isabela");
 //        fourthAlert.accept();

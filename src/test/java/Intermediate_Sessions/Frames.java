@@ -1,5 +1,8 @@
 package Intermediate_Sessions;
 
+import Helper_Methods.Elements_Methods;
+import Helper_Methods.Frames_Methods;
+import Helper_Methods.JavaScript_Methods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -9,47 +12,53 @@ import org.testng.annotations.Test;
 
 public class Frames {
     public WebDriver driver;
+    public JavaScript_Methods javaScriptMethods;
+    public Elements_Methods elementsMethods;
+    public Frames_Methods framesMethods;
 
     @Test
-    public void automationMethod3() {
-        //deschidem un Chrome browser
+    public void automationMethod3() throws InterruptedException {
         driver = new ChromeDriver();
-        //accesam o pagina web
         driver.get("https://demoqa.com/");
-
-        // facem browserul in modul maximized
         driver.manage().window().maximize();
-        // facem un scroll
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollBy(0,400)");
+
+        javaScriptMethods = new JavaScript_Methods(driver);
+        elementsMethods = new Elements_Methods(driver);
+        framesMethods = new Frames_Methods(driver);
+
+        javaScriptMethods.scrollMethod(0, 400);
 
         //declaram 'Alerts, Frame & Windows' element si dam click pe el
         WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-        AlertsFormElement.click();
+        elementsMethods.clickOnElement(AlertsFormElement);
 
         // declaram 'Frames' element si dam click pe el
         WebElement frameElement = driver.findElement(By.xpath("//span[text()='Frames']"));
-        frameElement.click();
+        elementsMethods.clickOnElement(frameElement);
 
         // definim primul frame si apoi facem switch ul catre el
         WebElement frame1Element = driver.findElement(By.id("frame1"));
+        framesMethods.switchToFrame(frame1Element);
 
-       driver.switchTo().frame(frame1Element);
+        //driver.switchTo().frame(frame1Element);
+        Thread.sleep(5000);
+        WebElement sampleFrame1Element = driver.findElement(By.id("sampleHeading"));
+        System.out.println("Textul din primul frame este: " + sampleFrame1Element.getText());
 
-       WebElement sampleFrame1Element = driver.findElement(By.id("sampleHeading"));
-       System.out.println("Textul din primul frame este: " + sampleFrame1Element.getText());
+        //mutam focusul pe pagina principala
+        framesMethods.switchToTheMainePage();
 
-       //mutam focusul pe pagina principala
-       driver.switchTo().defaultContent();
-
-        js.executeScript("window.scrollBy(0,600)");
+        javaScriptMethods.scrollMethod(0, 600);
+        Thread.sleep(5000);
         // definim al doilea frame, dam scroll si apoi facem switch ul catre el
         WebElement frame2Element = driver.findElement(By.id("frame2"));
 
-        driver.switchTo().frame(frame2Element);
+        framesMethods.switchToFrame(frame2Element);
 
         //facem scroll pe orizontal si vertical in cel de al doilea frame
-        js.executeScript("window.scrollBy(200,200)");
-//al doilea branch
+        javaScriptMethods.scrollMethod(200, 200);
+        Thread.sleep(5000);
+
+        //al doilea branch
     }
 }
