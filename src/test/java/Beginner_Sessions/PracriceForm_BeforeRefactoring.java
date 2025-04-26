@@ -1,21 +1,16 @@
 package Beginner_Sessions;
 
 import Helper_Methods.Elements_Methods;
-import Helper_Methods.JavaScript_Methods;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.time.chrono.JapaneseChronology;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PracticeForm_Test {
+public class PracriceForm_BeforeRefactoring {
     public WebDriver driver;
     public Elements_Methods elementsMethods;
-    public JavaScript_Methods javaScriptMethods;
 
     @Test
     public void automationMethod1() {
@@ -25,13 +20,11 @@ public class PracticeForm_Test {
         driver.get("https://demoqa.com/");
         // facem browserul in modul maximized
         driver.manage().window().maximize();
-
         elementsMethods = new Elements_Methods(driver);
-        javaScriptMethods = new JavaScript_Methods(driver);
 
         // facem un scroll
-        javaScriptMethods.scrollMethod(0,400);
-
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,400)");
 
         //declaram 'Forms' element si dam click pe el
         WebElement FormElement = driver.findElement(By.xpath("//h5[text()='Forms']"));
@@ -55,19 +48,19 @@ public class PracticeForm_Test {
         WebElement EmailAddressElement = driver.findElement(By.id("userEmail"));
         elementsMethods.fillElement(EmailAddressElement, "isabela.popescu@gmail.com");
 
-       //PhoneNumber
-       WebElement PhoneNumberElement = driver.findElement(By.cssSelector("input[placeholder='Mobile Number']"));
-       elementsMethods.fillElement(PhoneNumberElement, "0746832902");
+        //PhoneNumber
+        WebElement PhoneNumberElement = driver.findElement(By.cssSelector("input[placeholder='Mobile Number']"));
+        elementsMethods.fillElement(PhoneNumberElement, "0746832902");
 
         // Subjects input selection
-       WebElement subjectsElement = driver.findElement(By.id("subjectsInput"));
-       elementsMethods.fillElement(subjectsElement,"Social Studies");
-       subjectsElement.sendKeys(Keys.ENTER);
+        WebElement subjectsElement = driver.findElement(By.id("subjectsInput"));
+        elementsMethods.fillElement(subjectsElement, "Social Studies");
+        subjectsElement.sendKeys(Keys.ENTER);
 
 
-       // Picture - ''Choose File'' button - upload a picture
-       WebElement PictureElement = driver.findElement(By.id("uploadPicture"));
-       elementsMethods.uploadPicture(PictureElement);
+        // Picture - ''Choose File'' button - upload a picture
+        WebElement PictureElement = driver.findElement(By.id("uploadPicture"));
+        elementsMethods.uploadPicture(PictureElement);
 
 
         // gender selection
@@ -80,28 +73,36 @@ public class PracticeForm_Test {
         genderListElement.add(otherElement);
         elementsMethods.selectElementFromListByText(genderListElement, "Female");
 
-
-        // state element
-       WebElement stateElement = driver.findElement(By.id("react-select-3-input"));
-
-       javaScriptMethods.scrollMethod(0, 400);
-       elementsMethods.fillElement(stateElement, "NCR");
-       stateElement.sendKeys(Keys.ENTER);
-
-
-       // Select City
-       WebElement cityElement = driver.findElement(By.id("react-select-4-input"));
-       javaScriptMethods.forceClick(cityElement);
-       elementsMethods.fillElement(cityElement, "Noida");
-       cityElement.sendKeys(Keys.ENTER);
+//        String genderValue = "Female";
+//        if (maleElement.getText().equals(genderValue)) {
+//            maleElement.click();
+//        } else if (femaleElement.getText().equals(genderValue)) {
+//            femaleElement.click();
+//        } else if (otherElement.getText().equals(genderValue)) {
+//            otherElement.click();
+//        }
 
 
-       // Submit button
+//        // state element
+//        WebElement stateElement = driver.findElement(By.id("react-select-3-input"));
+//        js.executeScript("window.scrollBy(0,400)");
+//        js.executeScript("arguments[0].click();", stateElement);
+//        stateElement.sendKeys("NCR");
+//        stateElement.sendKeys(Keys.ENTER);
+//        String stateElementValue = "NCR";
+//
+//        // Select City
+//        WebElement cityElement = driver.findElement(By.id("react-select-4-input"));
+//        js.executeScript("arguments[0].click();", cityElement);
+//        cityElement.sendKeys("Noida");
+//        cityElement.sendKeys(Keys.ENTER);
+//        String cityElementValue = "Noida";
+//
+//        // Submit button
         WebElement submitButton = driver.findElement(By.id("submit"));
         elementsMethods.clickOnElement(submitButton);
-
-
-
+//
+//
 //        // Validare prima coloana
 //        System.out.println("Verificam ca elementele din prima coloana sunt cele asteptate ");
 //        // declaram prima lista - coloana 1 din tabel si lista cu expected values
@@ -162,5 +163,7 @@ public class PracticeForm_Test {
 
     }
 }
+
+
 
 
