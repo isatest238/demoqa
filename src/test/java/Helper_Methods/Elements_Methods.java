@@ -30,6 +30,7 @@ public class Elements_Methods {
         for (int i = 0; i < elementsList.size(); i++) {
             if (elementsList.get(i).getText().equals(value)) {
                 clickOnElement(elementsList.get(i));
+                break;
             }
         }
     }

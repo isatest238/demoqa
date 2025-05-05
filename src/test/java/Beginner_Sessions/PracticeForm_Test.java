@@ -30,17 +30,27 @@ public class PracticeForm_Test {
         javaScriptMethods = new JavaScript_Methods(driver);
 
         // facem un scroll
+        //javaScriptMethods.scrollMethod(0,400);
+
+        //inlocuieste linia 43 - 44
+        List <WebElement> elementField = driver.findElements(By.xpath("//h5"));
         javaScriptMethods.scrollMethod(0,400);
+        elementsMethods.selectElementFromListByText(elementField, "Forms");
 
 
         //declaram 'Forms' element si dam click pe el
-        WebElement FormElement = driver.findElement(By.xpath("//h5[text()='Forms']"));
-        elementsMethods.clickOnElement(FormElement);
+//        WebElement FormElement = driver.findElement(By.xpath("//h5[text()='Forms']"));
+//        elementsMethods.clickOnElement(FormElement);
+
+
+        //inlocuieste linia 53 - 54
+        List <WebElement> elementField2 = driver.findElements(By.xpath("//span[@class='text']"));
+        elementsMethods.selectElementFromListByText(elementField2, "Practice Form");
 
 
         // declaram 'Practice Form' element si dam click pe el
-        WebElement PracticeFormElement = driver.findElement(By.xpath("//span[text()='Practice Form']"));
-        elementsMethods.clickOnElement(PracticeFormElement);
+//        WebElement PracticeFormElement = driver.findElement(By.xpath("//span[text()='Practice Form']"));
+//        elementsMethods.clickOnElement(PracticeFormElement);
 
 
         // declaram FirstName field si introducem valoarea
