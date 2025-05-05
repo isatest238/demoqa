@@ -3,6 +3,8 @@ package Intermediate_Sessions;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Helper_Methods.Windows_Methods;
+import Pages.Home_Page;
+import Pages.SubMenu_Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +20,8 @@ public class Browser_Windows {
     public JavaScript_Methods javaScriptMethods;
     public Elements_Methods elementsMethods;
     public Windows_Methods windowsMethods;
+    Home_Page homePage;
+    SubMenu_Page subMenuPage;
 
     @Test
     public void automationMethod3() throws InterruptedException {
@@ -32,17 +36,23 @@ public class Browser_Windows {
         javaScriptMethods = new JavaScript_Methods(driver);
         elementsMethods = new Elements_Methods(driver);
         windowsMethods = new Windows_Methods(driver);
+        homePage = new Home_Page(driver);
+        subMenuPage = new SubMenu_Page(driver);
 
 
-        javaScriptMethods.scrollMethod(0, 400);
+        homePage.goToDesiredMenu("Alerts, Frame & Windows");
 
-        //declaram 'Alerts, Frame & Windows' element si dam click pe el
-        WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-        elementsMethods.clickOnElement(AlertsFormElement);
+//        javaScriptMethods.scrollMethod(0, 400);
+//
+//        //declaram 'Alerts, Frame & Windows' element si dam click pe el
+//        WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+//        elementsMethods.clickOnElement(AlertsFormElement);
+
+        subMenuPage.goToDesiredSubMenuPage("Browser Windows");
 
         // declaram 'Alerts' element si dam click pe el
-        WebElement browserWindowsElement = driver.findElement(By.xpath("//span[text()='Browser Windows']"));
-        elementsMethods.clickOnElement(browserWindowsElement);
+//        WebElement browserWindowsElement = driver.findElement(By.xpath("//span[text()='Browser Windows']"));
+//        elementsMethods.clickOnElement(browserWindowsElement);
 
         //declaram New Tab button si dam click pe el
         WebElement newTabElement = driver.findElement(By.id("tabButton"));

@@ -3,6 +3,8 @@ package Intermediate_Sessions;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.Frames_Methods;
 import Helper_Methods.JavaScript_Methods;
+import Pages.Home_Page;
+import Pages.SubMenu_Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +17,8 @@ public class Frames {
     public JavaScript_Methods javaScriptMethods;
     public Elements_Methods elementsMethods;
     public Frames_Methods framesMethods;
+    Home_Page homePage;
+    SubMenu_Page subMenuPage;
 
     @Test
     public void automationMethod3() throws InterruptedException {
@@ -25,16 +29,23 @@ public class Frames {
         javaScriptMethods = new JavaScript_Methods(driver);
         elementsMethods = new Elements_Methods(driver);
         framesMethods = new Frames_Methods(driver);
+        homePage = new Home_Page(driver);
+        subMenuPage = new SubMenu_Page(driver);
 
-        javaScriptMethods.scrollMethod(0, 400);
+        homePage.goToDesiredMenu("Alerts, Frame & Windows");
 
-        //declaram 'Alerts, Frame & Windows' element si dam click pe el
-        WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-        elementsMethods.clickOnElement(AlertsFormElement);
+//        javaScriptMethods.scrollMethod(0, 400);
+//
+//        //declaram 'Alerts, Frame & Windows' element si dam click pe el
+//        WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+//        elementsMethods.clickOnElement(AlertsFormElement);
+
+        subMenuPage.goToDesiredSubMenuPage("Frames");
+
 
         // declaram 'Frames' element si dam click pe el
-        WebElement frameElement = driver.findElement(By.xpath("//span[text()='Frames']"));
-        elementsMethods.clickOnElement(frameElement);
+//        WebElement frameElement = driver.findElement(By.xpath("//span[text()='Frames']"));
+//        elementsMethods.clickOnElement(frameElement);
 
         // definim primul frame si apoi facem switch ul catre el
         WebElement frame1Element = driver.findElement(By.id("frame1"));
