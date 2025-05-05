@@ -3,6 +3,8 @@ package Intermediate_Sessions;
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
+import Pages.Home_Page;
+import Pages.SubMenu_Page;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,6 +18,8 @@ public class Alerts {
     public Elements_Methods elementsMethods;
     public Alerts_Methods alertsMethods;
     public JavaScript_Methods javaScriptMethods;
+    Home_Page homePage;
+    SubMenu_Page subMenuPage;
 
     @Test
     public void automationMethod2() {
@@ -30,18 +34,24 @@ public class Alerts {
         elementsMethods = new Elements_Methods(driver);
         alertsMethods = new Alerts_Methods(driver);
         javaScriptMethods = new JavaScript_Methods(driver);
+        homePage = new Home_Page(driver);
+        subMenuPage = new SubMenu_Page(driver);
 
-        javaScriptMethods.scrollMethod(0, 400);
 
 
+        homePage.goToDesiredMenu("Alerts, Frame & Windows");
+
+
+//        javaScriptMethods.scrollMethod(0, 400);
         //declaram 'Alerts, Frame & Windows' element si dam click pe el
-        WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
-        elementsMethods.clickOnElement(AlertsFormElement);
+//        WebElement AlertsFormElement = driver.findElement(By.xpath("//h5[text()='Alerts, Frame & Windows']"));
+//        elementsMethods.clickOnElement(AlertsFormElement);
 
+        subMenuPage.goToDesiredSubMenuPage("Alerts");
 
         // declaram 'Alerts' element si dam click pe el
-        WebElement AlertsSectionElement = driver.findElement(By.xpath("//span[text()='Alerts']"));
-        elementsMethods.clickOnElement(AlertsSectionElement);
+//        WebElement AlertsSectionElement = driver.findElement(By.xpath("//span[text()='Alerts']"));
+//        elementsMethods.clickOnElement(AlertsSectionElement);
 
 
         //identificam prima alerta si dam click

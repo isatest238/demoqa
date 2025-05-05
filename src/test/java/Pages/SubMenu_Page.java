@@ -9,26 +9,24 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class Home_Page {
-        WebDriver driver;
-        Elements_Methods elementsMethods;
-        JavaScript_Methods javaScriptMethods;
-        Home_Page homePage;
+public class SubMenu_Page {
+    WebDriver driver;
+    Elements_Methods elementsMethods;
+    JavaScript_Methods javaScriptMethods;
 
-    public Home_Page(WebDriver driver) {
+    public SubMenu_Page(WebDriver driver) {
         this.driver = driver;
         this.elementsMethods = new Elements_Methods(driver);
         this.javaScriptMethods = new JavaScript_Methods(driver);
         PageFactory.initElements(driver, this);
     }
-
-    //identificam webelementele specifice pentru Homepage
-    @FindBy(xpath = "//h5")
+    //identificam webelementele specifice pentru SubMenu Page
+    @FindBy(xpath = "//span[@class='text']")
     List<WebElement> elements;
 
-    // identificam metodele specifice pentru Homepage (face click ul pe Forms si te duce pe pagina urmatoare)
-    public void goToDesiredMenu (String menu){
+    // identificam metodele specifice pentru Homepage (face click ul pe Forms si te duce pe pagina SubMenu Page)
+    public void goToDesiredSubMenuPage (String submenu){
         javaScriptMethods.scrollMethod(0,400);
-        elementsMethods.selectElementFromListByText(elements, menu);
+        elementsMethods.selectElementFromListByText(elements, submenu);
     }
 }
