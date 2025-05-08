@@ -24,8 +24,36 @@ public class Browser_Page {
     @FindBy(id ="tabButton")
     WebElement newTabElement;
 
-    public void clickNewTabButton(){
+    @FindBy(id ="sampleHeading")
+    WebElement sampleHeading;
+
+    @FindBy(id ="windowButton")
+    WebElement windowButton;
+
+    @FindBy(id ="messageWindowButton")
+    WebElement messageWindowButton;
+
+    public void clickNewTabButtonVerifyCloseReturnToMain(){
         elementsMethods.clickOnElement(newTabElement);
+        windowsMethods.switchToTab();
+        System.out.println("Textul din new Tab este: " + sampleHeading.getText());
+        windowsMethods.closeTab();
+        windowsMethods.switchToMain();
     }
 
+    public void clickNewWindowButtonVerifyCloseReturnToMain(){
+        elementsMethods.clickOnElement(windowButton);
+        windowsMethods.switchToTab();
+        System.out.println("Textul din new Tab este: " + sampleHeading.getText());
+        windowsMethods.closeTab();
+        windowsMethods.switchToMain();
+    }
+
+    public void clickNewWindowMessageVerifyCloseReturnToMain(){
+        elementsMethods.clickOnElement(messageWindowButton);
+        windowsMethods.switchToTab();
+        windowsMethods.switchToTab();
+        windowsMethods.closeTab();
+        windowsMethods.switchToMain();
+    }
 }
