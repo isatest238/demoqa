@@ -1,7 +1,6 @@
 package Pages;
 
-import Helper_Methods.Elements_Methods;
-import Helper_Methods.JavaScript_Methods;
+import Helper_Methods.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,15 +8,22 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class SubMenu_Page {
+public class SubMenu_Common_Page {
     WebDriver driver;
     Elements_Methods elementsMethods;
     JavaScript_Methods javaScriptMethods;
+    Alerts_Methods alertsMethods;
+    Windows_Methods windowsMethods;
+    Frames_Methods framesMethods;
+    Home_Page homePage;
 
-    public SubMenu_Page(WebDriver driver) {
+    public SubMenu_Common_Page(WebDriver driver) {
         this.driver = driver;
         this.elementsMethods = new Elements_Methods(driver);
         this.javaScriptMethods = new JavaScript_Methods(driver);
+        this.alertsMethods = new Alerts_Methods(driver);
+        this.windowsMethods = new Windows_Methods(driver);
+        this.framesMethods = new Frames_Methods(driver);
         PageFactory.initElements(driver, this);
     }
     //identificam webelementele specifice pentru SubMenu Page

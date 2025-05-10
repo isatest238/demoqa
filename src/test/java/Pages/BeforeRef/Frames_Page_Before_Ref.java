@@ -1,17 +1,26 @@
-package Pages;
+package Pages.BeforeRef;
 
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.Frames_Methods;
 import Helper_Methods.JavaScript_Methods;
-import Helper_Methods.Windows_Methods;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Frames_Page extends SubMenu_Common_Page{
+public class Frames_Page_Before_Ref {
+    WebDriver driver;
+    Elements_Methods elementsMethods;
+    Frames_Methods framesMethods;
+    JavaScript_Methods javaScriptMethods;
 
+    public Frames_Page_Before_Ref(WebDriver driver) {
+        this.driver = driver;
+        elementsMethods = new Elements_Methods(driver);
+        framesMethods = new Frames_Methods(driver);
+        javaScriptMethods = new JavaScript_Methods(driver);
+        PageFactory.initElements(driver, this);
+    }
 
     @FindBy(id = "frame1")
     WebElement firstFrame;
@@ -21,10 +30,6 @@ public class Frames_Page extends SubMenu_Common_Page{
 
     @FindBy(id = "sampleHeading")
     WebElement sampleHeading;
-
-    public Frames_Page(WebDriver driver) {
-        super(driver);
-    }
 
     public void switchToFrameVerifySwitchToMain() throws InterruptedException {
         framesMethods.switchToFrame(firstFrame);

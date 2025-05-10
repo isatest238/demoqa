@@ -1,10 +1,10 @@
-package Intermediate_Sessions;
+package Intermediate_Sessions.BeforeRef;
 
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Pages.Home_Page;
-import Pages.SubMenu_Page;
+import Pages.SubMenu_Common_Page;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,7 +19,8 @@ public class Alerts {
     public Alerts_Methods alertsMethods;
     public JavaScript_Methods javaScriptMethods;
     Home_Page homePage;
-    SubMenu_Page subMenuPage;
+
+    SubMenu_Common_Page subMenuPage;
 
     @Test
     public void automationMethod2() {
@@ -35,12 +36,10 @@ public class Alerts {
         alertsMethods = new Alerts_Methods(driver);
         javaScriptMethods = new JavaScript_Methods(driver);
         homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Page(driver);
-
+        subMenuPage = new SubMenu_Common_Page(driver);
 
 
         homePage.goToDesiredMenu("Alerts, Frame & Windows");
-
 
 //        javaScriptMethods.scrollMethod(0, 400);
         //declaram 'Alerts, Frame & Windows' element si dam click pe el
