@@ -12,8 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PracticeForm_Test_Ref extends Shared_Data {
-    public Elements_Methods elementsMethods;
-    public JavaScript_Methods javaScriptMethods;
+
     Home_Page homePage;
     SubMenu_Common_Page subMenuPage;
     PracticeForm_Page practiceFormPage;
@@ -22,15 +21,16 @@ public class PracticeForm_Test_Ref extends Shared_Data {
     @Test
     public void automationMethod1() {
 
-        elementsMethods = new Elements_Methods(driver);
-        javaScriptMethods = new JavaScript_Methods(driver);
-        homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Common_Page(driver);
-        practiceFormPage = new PracticeForm_Page(driver);
+        homePage = new Home_Page(getDriver());
+        subMenuPage = new SubMenu_Common_Page(getDriver());
+        practiceFormPage = new PracticeForm_Page(getDriver());
 
 
         homePage.goToDesiredMenu("Forms");
         subMenuPage.goToDesiredSubMenuPage("Practice Form");
+
+
+
         practiceFormPage.completeFirstPart("Isabela", "Vulpe", "isabela.vulpe@endava.com", "07465745", "Strada Detunata, nr.5, ap.125");
         practiceFormPage.uploadPicture();
 
@@ -43,15 +43,12 @@ public class PracticeForm_Test_Ref extends Shared_Data {
         practiceFormPage.completeSubjectWithList(subject);
 
 
-        javaScriptMethods.scrollMethod(0, 400);
+       // javaScriptMethods.scrollMethod(0, 400);
         List<String> hobbies = new ArrayList<>();
         hobbies.add("Sports");
         hobbies.add("Music");
         hobbies.add("Reading");
         practiceFormPage.completeHobbies(hobbies);
-
-
-        javaScriptMethods.scrollMethod(0, 400);
 
         practiceFormPage.completeStateElement("NCR");
 

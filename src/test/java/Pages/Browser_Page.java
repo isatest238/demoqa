@@ -12,16 +12,16 @@ import org.openqa.selenium.support.PageFactory;
 public class Browser_Page extends SubMenu_Common_Page{
 
     @FindBy(id ="tabButton")
-    WebElement newTabElement;
+    private WebElement newTabElement;
 
     @FindBy(id ="sampleHeading")
-    WebElement sampleHeading;
+    private WebElement sampleHeading;
 
     @FindBy(id ="windowButton")
-    WebElement windowButton;
+    private WebElement windowButton;
 
     @FindBy(id ="messageWindowButton")
-    WebElement messageWindowButton;
+    private WebElement messageWindowButton;
 
     public Browser_Page(WebDriver driver) {
         super(driver);

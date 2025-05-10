@@ -28,11 +28,12 @@ public class SubMenu_Common_Page {
     }
     //identificam webelementele specifice pentru SubMenu Page
     @FindBy(xpath = "//span[@class='text']")
-    List<WebElement> elements;
+    private List<WebElement> elements;
 
     // identificam metodele specifice pentru Homepage (face click ul pe Forms si te duce pe pagina SubMenu Page)
     public void goToDesiredSubMenuPage (String submenu){
         javaScriptMethods.scrollMethod(0,400);
         elementsMethods.selectElementFromListByText(elements, submenu);
+        javaScriptMethods.scrollMethod(0, -400);
     }
 }

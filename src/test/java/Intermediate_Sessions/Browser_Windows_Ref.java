@@ -11,9 +11,6 @@ import org.testng.annotations.Test;
 
 public class Browser_Windows_Ref extends Shared_Data {
 
-    public JavaScript_Methods javaScriptMethods;
-    public Elements_Methods elementsMethods;
-    public Windows_Methods windowsMethods;
     Home_Page homePage;
     SubMenu_Common_Page subMenuPage;
     Browser_Page browserPage;
@@ -21,12 +18,9 @@ public class Browser_Windows_Ref extends Shared_Data {
     @Test
     public void automationMethod3() throws InterruptedException {
 
-        javaScriptMethods = new JavaScript_Methods(driver);
-        elementsMethods = new Elements_Methods(driver);
-        windowsMethods = new Windows_Methods(driver);
-        homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Common_Page(driver);
-        browserPage = new Browser_Page(driver);
+        homePage = new Home_Page(getDriver());
+        subMenuPage = new SubMenu_Common_Page(getDriver());
+        browserPage = new Browser_Page(getDriver());
 
 
         homePage.goToDesiredMenu("Alerts, Frame & Windows");

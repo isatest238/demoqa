@@ -16,46 +16,46 @@ public class PracticeForm_Page extends SubMenu_Common_Page{
 
     //identificam webelementele specifice pentru Homepage
     @FindBy(id = "firstName")
-    WebElement firstNameElement;
+    private WebElement firstNameElement;
 
     @FindBy(id = "lastName")
-    WebElement lastNameElement;
+    private WebElement lastNameElement;
 
     @FindBy(id = "userEmail")
-    WebElement userEmailElement;
+    private WebElement userEmailElement;
 
     @FindBy(css = "input[placeholder='Mobile Number']")
-    WebElement phoneNumberElement;
+    private WebElement phoneNumberElement;
 
     @FindBy(id = "currentAddress")
-    WebElement currentAddress;
+    private WebElement currentAddress;
 
     @FindBy(id = "uploadPicture")
-    WebElement uploadPictureElement;
+    private WebElement uploadPictureElement;
 
     @FindBy(xpath = "//label[@for='gender-radio-1']")
-    WebElement maleGenderElement;
+    private WebElement maleGenderElement;
 
     @FindBy(xpath = "//label[@for='gender-radio-2']")
-    WebElement femaleGenderElement;
+    private WebElement femaleGenderElement;
 
     @FindBy(xpath = "//label[@for='gender-radio-3']")
-    WebElement otherGenderElement;
+    private WebElement otherGenderElement;
 
     @FindBy(id = "react-select-3-input")
-    WebElement stateElement;
+    private WebElement stateElement;
 
     @FindBy(id = "react-select-4-input")
-    WebElement cityElement;
+    private WebElement cityElement;
 
     @FindBy(xpath = "//label[@for='hobbies-checkbox-1']")
-    WebElement sportHobbyElement;
+    private WebElement sportHobbyElement;
 
     @FindBy(xpath = "//label[@for='hobbies-checkbox-2']")
-    WebElement readingHobbyElement;
+    private WebElement readingHobbyElement;
 
     @FindBy(xpath = "//label[@for='hobbies-checkbox-3']")
-    WebElement musicHobbyElement;
+    private WebElement musicHobbyElement;
 
     //    @FindBy(xpath = "//div[@id='subjectsContainer']")
 //    WebElement subjectsElement;
@@ -109,6 +109,7 @@ public class PracticeForm_Page extends SubMenu_Common_Page{
         hobbiesElement.add(musicHobbyElement);
         hobbiesElement.add(readingHobbyElement);
         elementsMethods.clickMultipleValuesList(hobbiesElement, hobbies);
+        javaScriptMethods.scrollMethod(0, 400);
 
     }
 

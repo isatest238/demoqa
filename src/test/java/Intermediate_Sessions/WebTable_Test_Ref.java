@@ -14,8 +14,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class WebTable_Test_Ref extends Shared_Data {
-    public Elements_Methods elementsMethods;
-    public JavaScript_Methods javaScriptMethods;
+
     Home_Page homePage;
     SubMenu_Common_Page subMenuPage;
     WebTable_Page webTablePage;
@@ -23,11 +22,10 @@ public class WebTable_Test_Ref extends Shared_Data {
     @Test
     public void automationMethod() {
 
-        elementsMethods = new Elements_Methods(driver);
-        javaScriptMethods = new JavaScript_Methods(driver);
-        homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Common_Page(driver);
-        webTablePage = new WebTable_Page(driver);
+
+        homePage = new Home_Page(getDriver());
+        subMenuPage = new SubMenu_Common_Page(getDriver());
+        webTablePage = new WebTable_Page(getDriver());
 
         homePage.goToDesiredMenu("Elements");
 
@@ -35,7 +33,7 @@ public class WebTable_Test_Ref extends Shared_Data {
         webTablePage.clickOnAddButton();
 
         // tabel - dimensiunea tabelului
-        List<WebElement> tableElement = driver.findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
+        List<WebElement> tableElement = getDriver().findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
         Integer actualTableSize = tableElement.size();
 
         webTablePage.fillRegistationForm("Isabela", "Vulpe", "isatest@gmail.com", "25", "25000", "Testing");
@@ -43,7 +41,7 @@ public class WebTable_Test_Ref extends Shared_Data {
 
 
         //verificare - o noua linie a fost adaugata in tabel comparand size ul tabelului
-        List<WebElement> tableElement1 = driver.findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
+        List<WebElement> tableElement1 = getDriver().findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
         Integer expectedSizeTable = actualTableSize + 1;
         Assert.assertEquals(tableElement1.size(), expectedSizeTable);
 
@@ -55,5 +53,4 @@ public class WebTable_Test_Ref extends Shared_Data {
 //        Assert.assertTrue(actualTableValue.contains(AgeValue));
 //        Assert.assertTrue(actualTableValue.contains(SalaryValue));
     }
-
 }

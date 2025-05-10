@@ -14,13 +14,13 @@ public class Frames_Page extends SubMenu_Common_Page{
 
 
     @FindBy(id = "frame1")
-    WebElement firstFrame;
+    private WebElement firstFrame;
 
     @FindBy(id = "frame2")
-    WebElement secondFrame;
+    private WebElement secondFrame;
 
     @FindBy(id = "sampleHeading")
-    WebElement sampleHeading;
+    private WebElement sampleHeading;
 
     public Frames_Page(WebDriver driver) {
         super(driver);

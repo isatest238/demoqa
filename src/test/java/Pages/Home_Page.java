@@ -14,7 +14,7 @@ public class Home_Page extends SubMenu_Common_Page{
 
     //identificam webelementele specifice pentru Homepage
     @FindBy(xpath = "//h5")
-    List<WebElement> elements;
+    private List<WebElement> elements;
 
     public Home_Page(WebDriver driver) {
         super(driver);
