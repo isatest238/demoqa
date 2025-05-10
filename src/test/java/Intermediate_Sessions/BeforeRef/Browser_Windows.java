@@ -1,19 +1,15 @@
-package Intermediate_Sessions;
+package Intermediate_Sessions.BeforeRef;
 
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Helper_Methods.Windows_Methods;
 import Pages.Home_Page;
-import Pages.SubMenu_Page;
+import Pages.SubMenu_Common_Page;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class Browser_Windows {
     public WebDriver driver;
@@ -21,7 +17,7 @@ public class Browser_Windows {
     public Elements_Methods elementsMethods;
     public Windows_Methods windowsMethods;
     Home_Page homePage;
-    SubMenu_Page subMenuPage;
+    SubMenu_Common_Page subMenuPage;
 
     @Test
     public void automationMethod3() throws InterruptedException {
@@ -37,7 +33,7 @@ public class Browser_Windows {
         elementsMethods = new Elements_Methods(driver);
         windowsMethods = new Windows_Methods(driver);
         homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Page(driver);
+        subMenuPage = new SubMenu_Common_Page(driver);
 
 
         homePage.goToDesiredMenu("Alerts, Frame & Windows");

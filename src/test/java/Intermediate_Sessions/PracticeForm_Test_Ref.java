@@ -4,49 +4,34 @@ import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Pages.Home_Page;
 import Pages.PracticeForm_Page;
-import Pages.SubMenu_Page;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import Pages.SubMenu_Common_Page;
+import Shared_Data.Shared_Data;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PracticeForm_Test_Ref {
-    public WebDriver driver;
+public class PracticeForm_Test_Ref extends Shared_Data {
     public Elements_Methods elementsMethods;
     public JavaScript_Methods javaScriptMethods;
     Home_Page homePage;
-    SubMenu_Page subMenuPage;
+    SubMenu_Common_Page subMenuPage;
     PracticeForm_Page practiceFormPage;
 
 
     @Test
     public void automationMethod1() {
-        //deschidem un Chrome browser
-        driver = new ChromeDriver();
-        //accesam o pagina web
-        driver.get("https://demoqa.com/");
-        // facem browserul in modul maximized
-        driver.manage().window().maximize();
 
         elementsMethods = new Elements_Methods(driver);
         javaScriptMethods = new JavaScript_Methods(driver);
         homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Page(driver);
+        subMenuPage = new SubMenu_Common_Page(driver);
         practiceFormPage = new PracticeForm_Page(driver);
 
 
         homePage.goToDesiredMenu("Forms");
-
         subMenuPage.goToDesiredSubMenuPage("Practice Form");
-
         practiceFormPage.completeFirstPart("Isabela", "Vulpe", "isabela.vulpe@endava.com", "07465745", "Strada Detunata, nr.5, ap.125");
-
-
         practiceFormPage.uploadPicture();
 
 

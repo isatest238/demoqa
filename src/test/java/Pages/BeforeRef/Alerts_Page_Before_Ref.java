@@ -1,17 +1,23 @@
-package Pages;
+package Pages.BeforeRef;
 
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.List;
+public class Alerts_Page_Before_Ref {
+    WebDriver driver;
+    Elements_Methods elementsMethods;
+    Alerts_Methods alertsMethods;
 
-public class Alerts_Page extends SubMenu_Common_Page {
-
+    public Alerts_Page_Before_Ref(WebDriver driver) {
+        this.driver = driver;
+        elementsMethods = new Elements_Methods(driver);
+        alertsMethods = new Alerts_Methods(driver);
+        PageFactory.initElements(driver, this);
+    }
 
     @FindBy(id ="alertButton")
     WebElement FirstAlertElement;
@@ -24,10 +30,6 @@ public class Alerts_Page extends SubMenu_Common_Page {
 
     @FindBy(id ="promtButton")
     WebElement FourthAlertElement;
-
-    public Alerts_Page(WebDriver driver) {
-        super(driver);
-    }
 
     public void clickOnFirstAlertOK (){
         elementsMethods.clickOnElement(FirstAlertElement);

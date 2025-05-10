@@ -1,4 +1,4 @@
-package Pages;
+package Pages.BeforeRef;
 
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
@@ -11,8 +11,18 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PracticeForm_Page extends SubMenu_Common_Page{
+public class PracticeForm_Page_Before_Ref {
+    WebDriver driver;
+    Elements_Methods elementsMethods;
+    JavaScript_Methods javaScriptMethods;
 
+
+    public PracticeForm_Page_Before_Ref(WebDriver driver) {
+        this.driver = driver;
+        this.elementsMethods = new Elements_Methods(driver);
+        this.javaScriptMethods = new JavaScript_Methods(driver);
+        PageFactory.initElements(driver, this);
+    }
 
     //identificam webelementele specifice pentru Homepage
     @FindBy(id = "firstName")
@@ -64,10 +74,6 @@ public class PracticeForm_Page extends SubMenu_Common_Page{
 
     @FindBy(id = "submit")
     WebElement submitButton;
-
-    public PracticeForm_Page(WebDriver driver) {
-        super(driver);
-    }
 
 
     public void completeFirstPart(String firstNme, String lastName, String email, String mobileNo, String address) {

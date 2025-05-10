@@ -9,17 +9,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class WebTable_Page {
-    WebDriver driver;
-    Elements_Methods elementsMethods;
-    JavaScript_Methods javaScriptMethods;
+public class WebTable_Page extends SubMenu_Common_Page {
 
-    public WebTable_Page(WebDriver driver) {
-        this.driver = driver;
-        this.elementsMethods = new Elements_Methods(driver);
-        this.javaScriptMethods = new JavaScript_Methods(driver);
-        PageFactory.initElements(driver, this);
-    }
 
     @FindBy(id = "addNewRecordButton")
     WebElement addButton;
@@ -44,6 +35,10 @@ public class WebTable_Page {
 
     @FindBy(id = "submit")
     WebElement submitButton;
+
+    public WebTable_Page(WebDriver driver) {
+        super(driver);
+    }
 
 
     public void clickOnAddButton() {

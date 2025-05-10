@@ -3,14 +3,11 @@ package Beginner_Sessions;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Pages.Home_Page;
-import Pages.SubMenu_Page;
+import Pages.SubMenu_Common_Page;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.io.File;
-import java.time.chrono.JapaneseChronology;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,7 +16,7 @@ public class PracticeForm_Test {
     public Elements_Methods elementsMethods;
     public JavaScript_Methods javaScriptMethods;
     Home_Page homePage;
-    SubMenu_Page subMenuPage;
+    SubMenu_Common_Page subMenuPage;
 
 
 
@@ -35,7 +32,7 @@ public class PracticeForm_Test {
         elementsMethods = new Elements_Methods(driver);
         javaScriptMethods = new JavaScript_Methods(driver);
         homePage = new Home_Page(driver);
-        subMenuPage = new SubMenu_Page(driver);
+        subMenuPage = new SubMenu_Common_Page(driver);
 
 
 
