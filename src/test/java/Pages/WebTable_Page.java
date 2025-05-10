@@ -13,28 +13,28 @@ public class WebTable_Page extends SubMenu_Common_Page {
 
 
     @FindBy(id = "addNewRecordButton")
-    WebElement addButton;
+    private WebElement addButton;
 
     @FindBy(id = "firstName")
-    WebElement firstName;
+    private WebElement firstName;
 
     @FindBy(id = "lastName")
-    WebElement lastName;
+    private WebElement lastName;
 
     @FindBy(id = "userEmail")
-    WebElement userEmail;
+    private WebElement userEmail;
 
     @FindBy(id = "age")
-    WebElement ageField;
+    private WebElement ageField;
 
     @FindBy(id = "salary")
-    WebElement salaryField;
+    private WebElement salaryField;
 
     @FindBy(id = "department")
-    WebElement departamentField;
+    private WebElement departamentField;
 
     @FindBy(id = "submit")
-    WebElement submitButton;
+    private WebElement submitButton;
 
     public WebTable_Page(WebDriver driver) {
         super(driver);

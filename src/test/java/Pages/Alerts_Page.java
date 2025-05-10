@@ -14,16 +14,16 @@ public class Alerts_Page extends SubMenu_Common_Page {
 
 
     @FindBy(id ="alertButton")
-    WebElement FirstAlertElement;
+    private WebElement FirstAlertElement;
 
     @FindBy(id ="timerAlertButton")
-    WebElement SecondAlertElement;
+    private WebElement SecondAlertElement;
 
     @FindBy(id ="confirmButton")
-    WebElement ThirdAlertElement;
+    private WebElement ThirdAlertElement;
 
     @FindBy(id ="promtButton")
-    WebElement FourthAlertElement;
+    private WebElement FourthAlertElement;
 
     public Alerts_Page(WebDriver driver) {
         super(driver);
@@ -37,6 +37,7 @@ public class Alerts_Page extends SubMenu_Common_Page {
     public void interactWithDelayAlert (){
         elementsMethods.clickOnElement(SecondAlertElement);
         alertsMethods.interactWithDelayAlert();
+        javaScriptMethods.scrollMethod(400, 0);
     }
 
     public void interactWithCancelAlert (){
