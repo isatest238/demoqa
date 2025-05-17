@@ -9,13 +9,13 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class SubMenu_Common_Page {
-    WebDriver driver;
-    Elements_Methods elementsMethods;
-    JavaScript_Methods javaScriptMethods;
-    Alerts_Methods alertsMethods;
-    Windows_Methods windowsMethods;
-    Frames_Methods framesMethods;
-    Home_Page homePage;
+   protected WebDriver driver;
+    protected Elements_Methods elementsMethods;
+    protected JavaScript_Methods javaScriptMethods;
+    protected Alerts_Methods alertsMethods;
+    protected Windows_Methods windowsMethods;
+    protected  Frames_Methods framesMethods;
+    protected   Home_Page homePage;
 
     public SubMenu_Common_Page(WebDriver driver) {
         this.driver = driver;
