@@ -19,7 +19,6 @@ public class Frames_Ref extends Shared_Data {
     @Test
     public void automationMethod3() throws InterruptedException {
 
-
         homePage = new Home_Page(getDriver());
         subMenuPage = new SubMenu_Common_Page(getDriver());
         framesPage = new Frames_Page(getDriver());
