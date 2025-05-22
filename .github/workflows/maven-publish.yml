@@ -30,7 +30,8 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Run automation suite
-      run: mvn clean install -DsuiteXmlFile=Suites/${{ github.event.inputs.suite }}.xml -P CustomSuite
+      run: mvn clean install -DsuiteXmlFile=Suites/SmokeSuite -PCustomSuite
+
 
 
 
