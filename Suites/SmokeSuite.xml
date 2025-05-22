@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="RegressionSuite" parallel="classes" thread-count="5">
-    <test name="RegressionSuite">
-        <packages>
-             <package name="Intermediate_Sessions.*"/>
-        </packages>
+<suite name="SmokeSuite" parallel="classes" thread-count="5">
+    <test name="SmokeSuite">
+        <classes>
+            <class name = "Intermediate_Sessions.Alerts_Ref"/>
+            <class name = "Intermediate_Sessions.Frames_Ref"/>
+        </classes>
+<!--        <packages>-->
+<!--             <package name="Intermediate_Sessions.*"/>-->
+<!--        </packages>-->
     </test>
 </suite>
