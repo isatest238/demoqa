@@ -1,5 +1,6 @@
 package Shared_Data;
 
+import Shared_Data.browser.BrowserFactory;
 import configFile.ConfigFile;
 import configFile.configNode.ConfigurationNode;
 import org.openqa.selenium.WebDriver;
@@ -11,26 +12,25 @@ import java.time.Duration;
 public class Shared_Data {
 
 
-
-
-
-
     private WebDriver driver;
 
     @BeforeMethod
 
     public void prepareBrowser() {
-        ConfigurationNode configurationNode = ConfigFile.createConfigNode(ConfigurationNode.class);
 
-        driver = new ChromeDriver();
-      //  driver.get("https://demoqa.com/");
-        driver.get(configurationNode.driverConfigNode.url);
+        driver = new BrowserFactory().getBrowserFactory();
 
-
-        //definim un wait implicit pentru un interval maxim de timp
-        //se activeaza dupa fiecare linie in care faci driver find element
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
+//        ConfigurationNode configurationNode = ConfigFile.createConfigNode(ConfigurationNode.class);
+//        driver = new ChromeDriver();
+//
+//      //  driver.get("https://demoqa.com/");
+//        driver.get(configurationNode.driverConfigNode.url);
+//
+//
+//        //definim un wait implicit pentru un interval maxim de timp
+//        //se activeaza dupa fiecare linie in care faci driver find element
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.manage().window().maximize();
     }
 
 

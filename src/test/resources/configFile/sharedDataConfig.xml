@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <DriverConfig>
-        <LocalBrowser>chrome</LocalBrowser>
+        <LocalBrowser>firefox</LocalBrowser>
         <Url>https://demoqa.com/</Url>
-        <Headless>--headless</Headless>
+        <Headless></Headless>
         <Resolution>window-size=1920,1080</Resolution>
         <Gpu>--disable-gpu</Gpu>
+        <Extensions>--disable-extensions</Extensions>
     </DriverConfig>
     <DatabasedConfig>
         <Port></Port>
@@ -13,4 +14,11 @@
         <Username></Username>
         <Password></Password>
     </DatabasedConfig>
+    <ServerConfig>
+        <Port></Port>
+        <DatabaseName></DatabaseName>
+        <Username></Username>
+        <Password></Password>
+    </ServerConfig>
+
 </configuration>
