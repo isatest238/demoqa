@@ -1,4 +1,4 @@
-package Intermediate_Sessions.BeforeRef;
+package TestsBeforeRef;
 
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
