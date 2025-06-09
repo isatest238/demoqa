@@ -1,17 +1,17 @@
 package Intermediate_Sessions;
 
-import Helper_Methods.Elements_Methods;
-import Helper_Methods.JavaScript_Methods;
+import ObjectData.PracticeForm_Object;
 import Pages.Home_Page;
 import Pages.PracticeForm_Page;
 import Pages.SubMenu_Common_Page;
+import PropertyUtility.Property_Utility;
 import Shared_Data.Shared_Data;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PracticeForm_Test_Ref extends Shared_Data {
+public class PracticeForm_TestRef extends Shared_Data {
 
     Home_Page homePage;
     SubMenu_Common_Page subMenuPage;
@@ -20,6 +20,10 @@ public class PracticeForm_Test_Ref extends Shared_Data {
 
     @Test
     public void automationMethod1() {
+
+       Property_Utility propertyUtility = new Property_Utility("PracticeForm_TestRef");
+       PracticeForm_Object practiceFormObject = new PracticeForm_Object(propertyUtility.getAllData());
+
 
         homePage = new Home_Page(getDriver());
         subMenuPage = new SubMenu_Common_Page(getDriver());
@@ -31,29 +35,32 @@ public class PracticeForm_Test_Ref extends Shared_Data {
 
 
 
-        practiceFormPage.completeFirstPart("Isabela", "Vulpe", "isabela.vulpe@endava.com", "07465745", "Strada Detunata, nr.5, ap.125");
+        practiceFormPage.completeFirstPart(practiceFormObject);
         practiceFormPage.uploadPicture();
 
 
-        practiceFormPage.completeGender("Male");
+        practiceFormPage.completeGender(practiceFormObject);
         //practiceFormPage.completeSubject("Maths");
-        List<String> subject = new ArrayList<>();
-        subject.add("Maths");
-        subject.add("English");
-        practiceFormPage.completeSubjectWithList(subject);
+
+//        List<String> subject = new ArrayList<>();
+//        subject.add("Maths");
+//        subject.add("English");
+        practiceFormPage.completeSubjectWithList(practiceFormObject);
 
 
        // javaScriptMethods.scrollMethod(0, 400);
-        List<String> hobbies = new ArrayList<>();
-        hobbies.add("Sports");
-        hobbies.add("Music");
-        hobbies.add("Reading");
-        practiceFormPage.completeHobbies(hobbies);
-
-        practiceFormPage.completeStateElement("NCR");
+//        List<String> hobbies = new ArrayList<>();
+//        hobbies.add("Sports");
+//        hobbies.add("Music");
+//        hobbies.add("Reading");
+        practiceFormPage.completeHobbies(practiceFormObject);
 
 
-        practiceFormPage.completeCityElement("Noida");
+
+        practiceFormPage.completeStateElement(practiceFormObject);
+
+
+        practiceFormPage.completeCityElement(practiceFormObject);
 
 
         practiceFormPage.clickOnButton();

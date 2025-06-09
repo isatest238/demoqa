@@ -2,6 +2,7 @@ package Pages;
 
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
+import ObjectData.PracticeForm_Object;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -70,16 +71,16 @@ public class PracticeForm_Page extends SubMenu_Common_Page{
     }
 
 
-    public void completeFirstPart(String firstNme, String lastName, String email, String mobileNo, String address) {
-        elementsMethods.fillElement(firstNameElement, firstNme);
-        elementsMethods.fillElement(lastNameElement, lastName);
-        elementsMethods.fillElement(userEmailElement, email);
-        elementsMethods.fillElement(phoneNumberElement, mobileNo);
-        elementsMethods.fillElement(currentAddress, address);
+    public void completeFirstPart(PracticeForm_Object practiceFormObject) {
+        elementsMethods.fillElement(firstNameElement,practiceFormObject.getFirstName());
+        elementsMethods.fillElement(lastNameElement, practiceFormObject.getLastName());
+        elementsMethods.fillElement(userEmailElement, practiceFormObject.getEmail());
+        elementsMethods.fillElement(phoneNumberElement, practiceFormObject.getMobileno());
+        elementsMethods.fillElement(currentAddress, practiceFormObject.getAddress());
     }
 
-    public void completeGender(String gender) {
-        switch (gender) {
+    public void completeGender(PracticeForm_Object practiceFormObject) {
+        switch (practiceFormObject.getGender()) {
             case "Male":
                 elementsMethods.clickOnElement(maleGenderElement);
                 break;
@@ -97,32 +98,39 @@ public class PracticeForm_Page extends SubMenu_Common_Page{
         elementsMethods.fillWithActions(subjectsElement, subject);
     }
 
-    public void completeSubjectWithList(List<String> list) {
+//    public void completeSubjectWithList(List<String> list) {
+//        elementsMethods.clickOnElement(subjectsElement);
+//        elementsMethods.fillMultipleValues(subjectsElement, list);
+//
+//    }
+
+    public void completeSubjectWithList(PracticeForm_Object practiceFormObject) {
         elementsMethods.clickOnElement(subjectsElement);
-        elementsMethods.fillMultipleValues(subjectsElement, list);
+        elementsMethods.fillMultipleValues(subjectsElement, practiceFormObject.getSubjects());
 
-    }
+   }
 
-    public void completeHobbies(List<String> hobbies) {
+
+    public void completeHobbies(PracticeForm_Object practiceFormObject) {
         List<WebElement> hobbiesElement = new ArrayList<>();
         hobbiesElement.add(sportHobbyElement);
         hobbiesElement.add(musicHobbyElement);
         hobbiesElement.add(readingHobbyElement);
-        elementsMethods.clickMultipleValuesList(hobbiesElement, hobbies);
+        elementsMethods.clickMultipleValuesList(hobbiesElement, practiceFormObject.getHobbies());
         javaScriptMethods.scrollMethod(0, 400);
 
     }
 
-    public void completeStateElement(String value) {
+    public void completeStateElement(PracticeForm_Object practiceFormObject) {
         // Fill with value using your helper
-        elementsMethods.fillElement(stateElement, value);
+        elementsMethods.fillElement(stateElement, practiceFormObject.getState());
         // Press Enter to confirm the selection
         stateElement.sendKeys(Keys.ENTER);
     }
 
-    public void completeCityElement(String value) {
+    public void completeCityElement(PracticeForm_Object practiceFormObject) {
         javaScriptMethods.forceClick(cityElement);
-        elementsMethods.fillElement(cityElement, value);
+        elementsMethods.fillElement(cityElement, practiceFormObject.getCity());
         cityElement.sendKeys(Keys.ENTER);
     }
 
