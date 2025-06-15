@@ -5,13 +5,13 @@ import Pages.Home_Page;
 import Pages.PracticeForm_Page;
 import Pages.SubMenu_Common_Page;
 import PropertyUtility.Property_Utility;
-import Shared_Data.Shared_Data;
+import Shared_Data.Hooks;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PracticeForm_TestRef extends Shared_Data {
+public class PracticeForm_TestRef extends Hooks {
 
     Home_Page homePage;
     SubMenu_Common_Page subMenuPage;

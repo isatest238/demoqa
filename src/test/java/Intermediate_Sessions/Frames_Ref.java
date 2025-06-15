@@ -6,10 +6,10 @@ import Helper_Methods.JavaScript_Methods;
 import Pages.Frames_Page;
 import Pages.Home_Page;
 import Pages.SubMenu_Common_Page;
-import Shared_Data.Shared_Data;
+import Shared_Data.Hooks;
 import org.testng.annotations.Test;
 
-public class Frames_Ref extends Shared_Data {
+public class Frames_Ref extends Hooks {
 
 
     Home_Page homePage;

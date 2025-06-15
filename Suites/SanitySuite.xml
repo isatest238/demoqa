@@ -3,8 +3,7 @@
     <test name="SmokeSuite">
         <classes>
             <class name = "Intermediate_Sessions.Alerts_Ref"/>
-            <class name = "Intermediate_Sessions.PracticeForm_TestRef"/>
-            <class name = "Intermediate_Sessions.WebTable_Test_Ref"/>
+            <class name = "Intermediate_Sessions.Frames_Ref"/>
         </classes>
     </test>
 </suite>

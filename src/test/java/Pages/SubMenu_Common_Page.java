@@ -1,6 +1,7 @@
 package Pages;
 
 import Helper_Methods.*;
+import Logger.Logger_Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -33,7 +34,10 @@ public class SubMenu_Common_Page {
     // identificam metodele specifice pentru Homepage (face click ul pe Forms si te duce pe pagina SubMenu Page)
     public void goToDesiredSubMenuPage (String submenu){
         javaScriptMethods.scrollMethod(0,400);
+        Logger_Utility.infoLog("The User scroll down the page");
         elementsMethods.selectElementFromListByText(elements, submenu);
+        Logger_Utility.infoLog("The User selects from submenu the option with the value: " + submenu);
         javaScriptMethods.scrollMethod(0, -400);
+        Logger_Utility.infoLog("The User scroll the page");
     }
 }

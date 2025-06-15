@@ -1,5 +1,6 @@
 package Shared_Data;
 
+import Logger.Logger_Utility;
 import Shared_Data.browser.BrowserFactory;
 import configFile.ConfigFile;
 import configFile.configNode.ConfigurationNode;
@@ -14,30 +15,22 @@ public class Shared_Data {
 
     private WebDriver driver;
 
-    @BeforeMethod
+    //@BeforeMethod
 
     public void prepareBrowser() {
 
         driver = new BrowserFactory().getBrowserFactory();
+        Logger_Utility.infoLog("The browser was opened with success");
 
-//        ConfigurationNode configurationNode = ConfigFile.createConfigNode(ConfigurationNode.class);
-//        driver = new ChromeDriver();
-//
-//      //  driver.get("https://demoqa.com/");
-//        driver.get(configurationNode.driverConfigNode.url);
-//
-//
-//        //definim un wait implicit pentru un interval maxim de timp
-//        //se activeaza dupa fiecare linie in care faci driver find element
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//        driver.manage().window().maximize();
+
     }
 
 
-    @AfterMethod
+  //  @AfterMethod
 
     public void clearBrowser() {
         driver.quit();
+        Logger_Utility.infoLog("The browser was opened with success");
     }
 
     public WebDriver getDriver() {

@@ -5,7 +5,7 @@ import Helper_Methods.JavaScript_Methods;
 import Pages.Home_Page;
 import Pages.SubMenu_Common_Page;
 import Pages.WebTable_Page;
-import Shared_Data.Shared_Data;
+import Shared_Data.Hooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class WebTable_Test_Ref extends Shared_Data {
+public class WebTable_Test_Ref extends Hooks {
 
     Home_Page homePage;
     SubMenu_Common_Page subMenuPage;
