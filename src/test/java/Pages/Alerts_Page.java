@@ -2,6 +2,7 @@ package Pages;
 
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
+import Logger.Logger_Utility;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -31,11 +32,14 @@ public class Alerts_Page extends SubMenu_Common_Page {
 
     public void clickOnFirstAlertOK (){
         elementsMethods.clickOnElement(FirstAlertElement);
+//        Logger_Utility.infoLog("The User click on element: " + FirstAlertElement);
         alertsMethods.interactWithAlertsOK();
+//        Logger_Utility.infoLog("User interactioneaza cu prima alerta, click on OK button");
     }
 
     public void interactWithDelayAlert (){
         elementsMethods.clickOnElement(SecondAlertElement);
+//        Logger_Utility.infoLog("The User click on second alert after 5 seconds" + SecondAlertElement);
         alertsMethods.interactWithDelayAlert();
         javaScriptMethods.scrollMethod(400, 0);
     }
