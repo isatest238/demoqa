@@ -5,7 +5,7 @@ name: Regression Package
 
 on:
   schedule:
-    - cron: '00 23 * * 1-5'
+    - cron: '36 17 * * 1-5'
   workflow_dispatch:
     inputs:
       suite:
