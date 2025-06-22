@@ -5,7 +5,7 @@ name: Nightly Pipeline
 
 on:
   schedule:
-    - cron: '45 14 * * 1-5'
+    - cron: '53 14 * * 1-5'
   workflow_dispatch:
     inputs:
       suite:
@@ -35,7 +35,13 @@ jobs:
           settings-path: ${{ github.workspace }} # location for the settings.xml file
 
       - name: Run automation suite
-        run: mvn clean install -DciCd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=Suites/${{ github.event.inputs.suite }} -PCustomSuite
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "Scheduled run at 17:45 local time"
+            mvn clean install -DciCd=true -Dbrowser=chrome -DsuiteXmlFile=Suites/RegressionSuite -PCustomSuite
+          else
+            echo "Manual run with inputs"
+            mvn clean install -DciCd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=Suites/${{ github.event.inputs.suite }} -PCustomSuite
 
 
 
