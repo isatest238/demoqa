@@ -42,7 +42,7 @@ jobs:
           else
             echo "Manual run with inputs"
             mvn clean install -DciCd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=Suites/${{ github.event.inputs.suite }} -PCustomSuite
-
+          fi
 
 
 
