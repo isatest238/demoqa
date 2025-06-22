@@ -4,8 +4,7 @@
 name: Regression Pipeline
 
 on:
-  schedule:
-    - cron: '36 17 * * 1-5'
+
   workflow_dispatch:
     inputs:
       suite:
