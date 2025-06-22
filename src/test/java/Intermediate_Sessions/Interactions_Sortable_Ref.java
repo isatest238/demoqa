@@ -1,5 +1,7 @@
 package Intermediate_Sessions;
 
+import ExtentUtility.Extent_Utility;
+import ExtentUtility.Report_Step;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Pages.Home_Page;
@@ -20,7 +22,11 @@ public class Interactions_Sortable_Ref extends Hooks{
         subMenuPage = new SubMenu_Common_Page(getDriver());
 
         homePage.goToDesiredMenu("Interactions");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Interaction submenu");
+
         subMenuPage.goToDesiredSubMenuPage("Sortable");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Sortable submenu");
+
 
     }
 }

@@ -1,5 +1,7 @@
 package Intermediate_Sessions;
 
+import ExtentUtility.Extent_Utility;
+import ExtentUtility.Report_Step;
 import ObjectData.PracticeForm_Object;
 import Pages.Home_Page;
 import Pages.PracticeForm_Page;
@@ -31,21 +33,28 @@ public class PracticeForm_TestRef extends Hooks {
 
 
         homePage.goToDesiredMenu("Forms");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Forms menu");
+
         subMenuPage.goToDesiredSubMenuPage("Practice Form");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Practice Form submenu");
+
 
 
 
         practiceFormPage.completeFirstPart(practiceFormObject);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user complete the first part of the Practice Form ");
         practiceFormPage.uploadPicture();
-
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user upload picture");
 
         practiceFormPage.completeGender(practiceFormObject);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters gender");
         //practiceFormPage.completeSubject("Maths");
 
 //        List<String> subject = new ArrayList<>();
 //        subject.add("Maths");
 //        subject.add("English");
         practiceFormPage.completeSubjectWithList(practiceFormObject);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user complete subject field");
 
 
        // javaScriptMethods.scrollMethod(0, 400);
@@ -54,16 +63,21 @@ public class PracticeForm_TestRef extends Hooks {
 //        hobbies.add("Music");
 //        hobbies.add("Reading");
         practiceFormPage.completeHobbies(practiceFormObject);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters hobbies");
 
 
 
         practiceFormPage.completeStateElement(practiceFormObject);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters State");
 
 
         practiceFormPage.completeCityElement(practiceFormObject);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters City");
 
 
         practiceFormPage.clickOnButton();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user click on submit button");
+
 
 //        // Validare prima coloana
 //        System.out.println("Verificam ca elementele din prima coloana sunt cele asteptate ");

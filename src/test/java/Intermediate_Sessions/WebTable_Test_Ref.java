@@ -1,5 +1,7 @@
 package Intermediate_Sessions;
 
+import ExtentUtility.Extent_Utility;
+import ExtentUtility.Report_Step;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Pages.Home_Page;
@@ -28,22 +30,31 @@ public class WebTable_Test_Ref extends Hooks {
         webTablePage = new WebTable_Page(getDriver());
 
         homePage.goToDesiredMenu("Elements");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters Elements menu");
+
 
         subMenuPage.goToDesiredSubMenuPage("Web Tables");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters Web Table submenu");
         webTablePage.clickOnAddButton();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user click on Add new button");
 
         // tabel - dimensiunea tabelului
         List<WebElement> tableElement = getDriver().findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
         Integer actualTableSize = tableElement.size();
 
         webTablePage.fillRegistationForm("Isabela", "Vulpe", "isatest@gmail.com", "25", "25000", "Testing");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user fill all the required fields");
         webTablePage.clickOnSubmit();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user click on Submit");
 
 
         //verificare - o noua linie a fost adaugata in tabel comparand size ul tabelului
         List<WebElement> tableElement1 = getDriver().findElements(By.xpath("//div[@class='rt-tbody']/div/div[@class='rt-tr -odd' or @class='rt-tr -even']"));
         Integer expectedSizeTable = actualTableSize + 1;
         Assert.assertEquals(tableElement1.size(), expectedSizeTable);
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"New user added successfully");
+
+
 
         //validarea elementelor adaugate in tabel in ultima linie
 //        String actualTableValue = tableElement1.get(3).getText();

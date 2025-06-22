@@ -1,5 +1,7 @@
 package Intermediate_Sessions;
 
+import ExtentUtility.Extent_Utility;
+import ExtentUtility.Report_Step;
 import Helper_Methods.Alerts_Methods;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
@@ -25,13 +27,23 @@ public class Alerts_Ref extends Hooks {
         alertsPage = new Alerts_Page(getDriver());
 
         homePage.goToDesiredMenu("Alerts, Frame & Windows");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Alerts, Frame& Windows menu");
+
+
         subMenuPage.goToDesiredSubMenuPage("Alerts");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Alerts submenu");
         //javaScriptMethods.scrollMethod(0, -400);
         alertsPage.clickOnFirstAlertOK();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user deals with the alert with OK");
+
         alertsPage.interactWithDelayAlert();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user deals with the alert with Delay");
         //javaScriptMethods.scrollMethod(400, 0);
 
         alertsPage.interactWithCancelAlert();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user deals with the alert with Cancel");
+
         alertsPage.interactSendKeyAlert();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user deals with the alert with sendkey");
     }
 }

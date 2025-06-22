@@ -1,5 +1,7 @@
 package Intermediate_Sessions;
 
+import ExtentUtility.Extent_Utility;
+import ExtentUtility.Report_Step;
 import Helper_Methods.Elements_Methods;
 import Helper_Methods.JavaScript_Methods;
 import Helper_Methods.Windows_Methods;
@@ -24,9 +26,19 @@ public class Browser_Windows_Ref extends Hooks {
 
 
         homePage.goToDesiredMenu("Alerts, Frame & Windows");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters on Alerts, Frame& Windows menu");
+
         subMenuPage.goToDesiredSubMenuPage("Browser Windows");
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user enters oBrowser Windows menu");
+
         browserPage.clickNewTabButtonVerifyCloseReturnToMain();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user interacts with the new browser tab and return to main");
+
         browserPage.clickNewWindowButtonVerifyCloseReturnToMain();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user interacts new window / close the windows and return to main");
+
         browserPage.clickNewWindowMessageVerifyCloseReturnToMain();
+        Extent_Utility.attachLog(Report_Step.PASS_STEP,"The user interacts new window / close the windows and return to main");
+
     }
 }

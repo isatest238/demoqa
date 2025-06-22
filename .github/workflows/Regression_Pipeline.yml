@@ -36,6 +36,16 @@ jobs:
       - name: Run automation suite
         run: mvn clean install -DciCd=true -Dbrowser=${{ github.event.inputs.browser }} -DsuiteXmlFile=Suites/${{ github.event.inputs.suite }} -PCustomSuite
 
-
+      - name: Publish suite results
+        if: always()
+        uses: actions/upload-artifact@v2
+        with:
+          name: SuiteResults
+          path: |
+            target/extendReports
+            target/logs/RegressionLogs.log
+          
+          
+      
 
 
