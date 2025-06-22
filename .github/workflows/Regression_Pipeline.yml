@@ -42,7 +42,7 @@ jobs:
         with:
           name: SuiteResults
           path: |
-            target/extendReports
+            target/extentReports
             target/logs/RegressionLogs.log
           
           
