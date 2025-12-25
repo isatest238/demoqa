@@ -1,6 +1,7 @@
 package Shared_Data.browser.service;
 
 import configFile.configNode.DriverConfigNode;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -13,6 +14,9 @@ public class ChromeBrowserService implements BrowserService{
 
     @Override
     public void openBrowser(DriverConfigNode driverConfigNode) {
+
+        WebDriverManager.chromedriver().setup();
+
         ChromeOptions options = (ChromeOptions) getBrowserOptions(driverConfigNode);
         driver = new ChromeDriver(options);
         driver.get(driverConfigNode.url);
@@ -24,7 +28,7 @@ public class ChromeBrowserService implements BrowserService{
         ChromeOptions options = new ChromeOptions();
 
         if(!driverConfigNode.headless.isEmpty()){
-            options.addArguments(driverConfigNode.headless);
+            //options.addArguments(driverConfigNode.headless);
         }
         options.addArguments(driverConfigNode.resolution);
         options.addArguments(driverConfigNode.gpu);
