@@ -5,54 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="921c7c1b-5f99-465d-91ee-12beb355a03e" name="Changes" comment="small changes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/AuthHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/Login_Successful.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Elements_Buttons.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Elements_RadioButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Elements_TextBox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Elements_Upload_Download.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Interactions_Selectable_ListView_GridView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Interactions_Sortable_GridView_Structuri_Repetitive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/Interactions_Sortable_ListView_Structuri_Repetitive.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/PracriceForm_BeforeRefactoring.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/PracticeForm_Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Beginner_Sessions/WebTable_Test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/Alerts_Methods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/Elements_Methods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/Frames_Methods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/JavaScript_Methods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/Windows_Methods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_Sessions/Alerts_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_Sessions/Browser_Windows_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_Sessions/Frames_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_Sessions/Interactions_Sortable_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_Sessions/PracticeForm_TestRef.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_Sessions/WebTable_Test_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_TestsBeforeRef/Alerts.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_TestsBeforeRef/Browser_Windows.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Intermediate_TestsBeforeRef/Frames.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ObjectData/CommonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/objectData/CommonObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ObjectData/PracticeForm_Object.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/objectData/PracticeForm_Object.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Alerts_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BeforeRef/Alerts_Page_Before_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BeforeRef/Browser_Page_Before_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BeforeRef/Frames_Page_Before_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BeforeRef/Home_Page_Before_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/BeforeRef/PracticeForm_Page_Before_Ref.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Browser_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Frames_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/Home_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/PracticeForm_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/SubMenu_Common_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/WebTable_Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Shared_Data/Shared_Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Shared_Data/Shared_Data.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Shared_Data/browser/service/ChromeBrowserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Shared_Data/browser/service/ChromeBrowserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/InputData/PracticeForm_TestRefData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/InputData/Login_SuccessfulData.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Login_Successful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Login_Successful.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +123,7 @@
     "TestNG.Login_Successful.Login_Successful (2).executor": "Run",
     "TestNG.Login_Successful.Login_Successful (3).executor": "Run",
     "TestNG.Login_Successful.Login_Successful (4).executor": "Run",
-    "TestNG.Login_Successful.Login_Successful.executor": "Debug",
+    "TestNG.Login_Successful.Login_Successful.executor": "Run",
     "TestNG.Login_Successful.executor": "Run",
     "TestNG.PracriceForm_BeforeRefactoring.executor": "Run",
     "TestNG.PracticeForm_Test.automationMethod (1).executor": "Run",
@@ -223,7 +177,7 @@
       <recent name="Intermediate_Sessions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Login_Successful.Login_Successful (1)">
+  <component name="RunManager" selected="TestNG.Login_Successful.Login_Successful">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -294,8 +248,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Login_Successful.Login_Successful (1)" />
         <item itemvalue="TestNG.Login_Successful.Login_Successful" />
+        <item itemvalue="TestNG.Login_Successful.Login_Successful (1)" />
         <item itemvalue="TestNG.Login_Successful (1)" />
         <item itemvalue="TestNG.Login_Successful.Login_Successful (3)" />
         <item itemvalue="TestNG.Login_Successful.Login_Successful (2)" />
