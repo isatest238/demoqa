@@ -1,6 +1,7 @@
 import ExtentUtility.Extent_Utility;
 import ExtentUtility.Report_Step;
 import Helper_Methods.AuthHelper;
+import Pages.HomePage;
 import Pages.LoginPage;
 import PropertyUtility.Property_Utility;
 import Shared_Data.Hooks;
@@ -43,9 +44,10 @@ public class Login_Successful extends Hooks {
         actions.sendKeys(Keys.ESCAPE).perform();
 
         // identify unique element from the Home Page
-        WebElement homeScreenElement = getWait().until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[@class='V4i7m' and span='Jetzt läuft im TV']")));
+        HomePage homePage = new HomePage(getDriver(), getWait());
 
-        Assert.assertEquals(homeScreenElement.getText(), data.get("expectedHeader"), "Text verification failed!");
+
+        Assert.assertEquals(homePage.getNowOnTvHeaderText(), data.get("expectedHeader"), "Text verification failed!");
 
     }
 }
