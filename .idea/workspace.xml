@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="921c7c1b-5f99-465d-91ee-12beb355a03e" name="Changes" comment="small changes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/UiHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/FreemiumFlows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/LogoutFlows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Best_Modal_Overlay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/UserMenuComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/VOD_Detail_Page.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTCs/NGTVOTT_7311.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/InputData/CommonData.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/AuthHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/AuthHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/UiHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/UiHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Shared_Data/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Shared_Data/Hooks.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Login_Successful.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Login_Successful_TestCase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/InputData/Login_SuccessfulData.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/InputData/Login_Successful_TestCaseData.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/configFile/sharedDataConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configFile/sharedDataConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/file_upload_selenium_java.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,8 +137,17 @@
     "TestNG.Login_Successful.Login_Successful (4).executor": "Run",
     "TestNG.Login_Successful.Login_Successful.executor": "Run",
     "TestNG.Login_Successful.executor": "Run",
+    "TestNG.Login_Successful_TestCase (1).executor": "Run",
     "TestNG.Login_Successful_TestCase.Login_Successful (1).executor": "Run",
+    "TestNG.Login_Successful_TestCase.Login_Successful.executor": "Run",
     "TestNG.Login_Successful_TestCase.executor": "Run",
+    "TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode (1).executor": "Run",
+    "TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode.executor": "Run",
+    "TestNG.NGTVOTT_7311.executor": "Run",
+    "TestNG.NGTVOTT_7311_AddToFavorite.executor": "Run",
+    "TestNG.Post_login_Redirection_in_Freemium_Mode.Post_login_Redirection_in_Freemium_ModeTC.executor": "Run",
+    "TestNG.Post_login_Redirection_in_Freemium_Mode.executor": "Run",
+    "TestNG.Post_login_Redirection_in_Freemium_Mode.ost_login_Redirection_in_Freemium_ModeTC.executor": "Run",
     "TestNG.PracriceForm_BeforeRefactoring.executor": "Run",
     "TestNG.PracticeForm_Test.automationMethod (1).executor": "Run",
     "TestNG.PracticeForm_Test.automationMethod (2).executor": "Run",
@@ -184,7 +200,7 @@
       <recent name="Intermediate_Sessions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.Login_Successful_TestCase.Login_Successful">
+  <component name="RunManager" selected="TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -206,7 +222,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login_Successful_TestCase" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Login_Successful_TestCase (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MagentaTVAutomation" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Login_Successful_TestCase" />
@@ -217,18 +233,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Login_Successful_TestCase.Login_Successful (1)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="MagentaTVAutomation" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="Login_Successful_TestCase" />
-      <option name="METHOD_NAME" value="Login_Successful" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Login_Successful_TestCase.Login_Successful" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MagentaTVAutomation" />
       <option name="PACKAGE_NAME" value="" />
@@ -270,6 +274,59 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="Login_Successful_TestCase" />
       <option name="METHOD_NAME" value="Login_Successful" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NGTVOTT_7311" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MagentaTVAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.LoginTCs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.LoginTCs" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTCs.NGTVOTT_7311" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NGTVOTT_7311_AddToFavorite.Post_login_Redirection_in_Freemium_Mode" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MagentaTVAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.LoginTCs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.LoginTCs" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTCs.NGTVOTT_7311_AddToFavorite" />
+      <option name="METHOD_NAME" value="Post_login_Redirection_in_Freemium_Mode" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MagentaTVAutomation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.LoginTCs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.LoginTCs" />
+      <option name="MAIN_CLASS_NAME" value="tests.LoginTCs.NGTVOTT_7311" />
+      <option name="METHOD_NAME" value="Post_login_Redirection_in_Freemium_Mode" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -279,11 +336,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode" />
+        <item itemvalue="TestNG.NGTVOTT_7311_AddToFavorite" />
+        <item itemvalue="TestNG.NGTVOTT_7311_AddToFavorite.Post_login_Redirection_in_Freemium_Mode" />
         <item itemvalue="TestNG.Login_Successful_TestCase.Login_Successful" />
-        <item itemvalue="TestNG.Login_Successful_TestCase" />
-        <item itemvalue="TestNG.Login_Successful_TestCase.Login_Successful (1)" />
-        <item itemvalue="TestNG.Login_Successful_TestCase.Login_Successful" />
-        <item itemvalue="TestNG.Login_Successful_TestCase.Login_Successful" />
+        <item itemvalue="TestNG.Login_Successful_TestCase (1)" />
       </list>
     </recent_temporary>
   </component>

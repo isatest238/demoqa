@@ -2,7 +2,7 @@
 <configuration>
     <DriverConfig>
         <LocalBrowser>chrome</LocalBrowser>
-        <Url>https://demoqa.com/</Url>
+        <Url>https://beta.magenta.tv//</Url>
         <Headless>--headless</Headless>
         <Resolution>window-size=1920,1080</Resolution>
         <Gpu>--disable-gpu</Gpu>

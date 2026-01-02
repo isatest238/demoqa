@@ -8,8 +8,7 @@ public class AuthHelper {
     public static void openWithBasicAuth(WebDriver driver, String user, String pass, String url) {
         ((HasAuthentication) driver).register(
                 uri -> uri.getHost().contains("beta.magenta.tv"),
-                UsernameAndPassword.of(user, pass)
-        );
+                UsernameAndPassword.of(user, pass));
 
         driver.get(url);
     }

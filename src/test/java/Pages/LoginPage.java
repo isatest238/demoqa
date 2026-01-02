@@ -1,6 +1,5 @@
 package Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -31,6 +30,12 @@ public class LoginPage {
 
     @FindBy(id = "dont_ask_again")
     private WebElement dontAskAgainBtn;
+
+    @FindBy(xpath ="//dialog[contains(@class,'N5zV1') and @open]//button[@id='OVERLAY-CLOSE']")
+    private WebElement overlayCloseBtn1;
+
+    @FindBy(xpath = "//dialog[@open]//button[@id='OVERLAY-CLOSE']")
+    private WebElement overlayCloseBtn2;
 
 
     public LoginPage(WebDriver driver, WebDriverWait wait) {
@@ -74,5 +79,12 @@ public class LoginPage {
         return this;
     }
 
-
+    public LoginPage clickoverlayCloseBtn1() {
+        wait.until(ExpectedConditions.visibilityOf(overlayCloseBtn1)).click();
+        return this;
+    }
+    public LoginPage clickoverlayCloseBtn2() {
+        wait.until(ExpectedConditions.visibilityOf(overlayCloseBtn2)).click();
+        return this;
+    }
 }
