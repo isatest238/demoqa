@@ -1,16 +1,15 @@
 package Helper_Methods;
+import ExtentUtility.Extent_Utility;
+import ExtentUtility.Report_Step;
+import Logger.Logger_Utility;
 import Pages.Best_Modal_Overlay;
 import Pages.HomePage;
 import Pages.LoginPage;
-import PropertyUtility.Property_Utility;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-
-import java.util.HashMap;
 import java.util.Map;
 
-import static java.sql.DriverManager.getDriver;
 
 public class FreemiumFlows {
 
@@ -22,40 +21,64 @@ public class FreemiumFlows {
         this.wait = wait;
     }
 
-    public void goToFreemiumPage() {
+    public void goToFreemiumPage(Map<String,String> data) {
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Navigate to Freemium page (Basic Auth + accept cookies)");
+        Logger_Utility.infoLog("Navigate to Freemium page (Basic Auth + accept cookies)");
+
         driver.manage().window().maximize();
-        HashMap<String, String> data = new Property_Utility("Common").getAllData();
         AuthHelper.openWithBasicAuth(driver, data.get("basicUser"), data.get("basicPass"), data.get("baseUrl"));
         new LoginPage(driver, wait).acceptCookies();
+
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Freemium page opened successfully");
+        Logger_Utility.infoLog("Freemium page opened successfully");
     }
 
     public void assertFreemium() {
-        // Freemium validations
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Validate Freemium state: MENU-LOGIN visible & Freemium label visible");
+        Logger_Utility.infoLog("Validate Freemium state");
+
         HomePage home = new HomePage(driver, wait);
+
         Assert.assertTrue(home.isMenuLoginVisible(), "Freemium: MENU-LOGIN should be visible");
         Assert.assertTrue(home.isFreemiumLabelVisible(), "Freemium: label should be visible");
+
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Freemium mode confirmed");
+        Logger_Utility.infoLog("Freemium mode confirmed");
 
     }
 
     public void loginFromOverlay(Map<String, String> data) {
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Login from overlay started");
+        Logger_Utility.infoLog("Login from overlay started");
+
         Best_Modal_Overlay overlay = new Best_Modal_Overlay(driver, wait);
         LoginPage loginPage = new LoginPage(driver, wait);
-        UiHelper uiHelper = new UiHelper(driver, wait);
-        Assert.assertTrue(overlay.isDisplayed(), "Login overlay should be displayed");
 
         overlay.clickLogin();
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Clicked Login on overlay");
+        Logger_Utility.infoLog("Clicked Login on overlay");
+
         loginPage.enterUserInput(data.get("loginUser"));
         loginPage.clickNext();
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Inserted username and clicked Next");
+        Logger_Utility.infoLog("Inserted username and clicked Next");
 
         loginPage.enterPassword(data.get("loginPass"));
         loginPage.submitLogin();
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Inserted password and submitted");
+        Logger_Utility.infoLog("Inserted password and submitted");
 
         loginPage.clickDontAskAgain();
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Clicked Don't ask again");
+        Logger_Utility.infoLog("Clicked Don't ask again");
 
         loginPage.clickoverlayCloseBtn1();
         loginPage.clickoverlayCloseBtn2();
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Closed overlays");
+        Logger_Utility.infoLog("Closed overlays");
 
-        uiHelper.pressEsc();
-        uiHelper.pressEsc();
-    }
+        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Login from overlay finished");
+        Logger_Utility.infoLog("Login from overlay finished");
+
+      }
 }

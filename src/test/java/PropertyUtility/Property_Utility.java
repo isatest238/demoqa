@@ -18,6 +18,8 @@ public class Property_Utility {
 
         try {
             FileInputStream fileInputStream = new FileInputStream("src/test/resources/InputData/"+testName+"Data.properties");
+            //FileInputStream fis = new FileInputStream("src/test/resources/InputData/" + testName + ".properties");
+
             properties.load(fileInputStream);
         } catch (Exception e) {
             System.out.println(e.getMessage());

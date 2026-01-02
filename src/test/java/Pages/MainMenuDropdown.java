@@ -1,7 +1,6 @@
 package Pages;
 
 import lombok.Getter;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import static java.sql.DriverManager.getDriver;
-
-public class UserMenuComponent {
+public class MainMenuDropdown {
 
     @Getter
     private WebDriver driver;
@@ -27,13 +24,13 @@ public class UserMenuComponent {
     private WebElement menuLogoutBtn;
 
 
-    public UserMenuComponent(WebDriver driver, WebDriverWait wait) {
+    public MainMenuDropdown(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
         PageFactory.initElements(driver, this);
     }
 
-    public UserMenuComponent clickuserProfileBtn() {
+    public MainMenuDropdown clickuserProfileBtn() {
         wait.until(ExpectedConditions.elementToBeClickable(userProfileBtn)).click();
         return this;
     }

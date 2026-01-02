@@ -16,10 +16,6 @@ public class VOD_Detail_Page {
     @FindBy(id = "PIN")
     private WebElement addToFavoritesBtn;
 
-//    // STARE activă (adaptezi)
-//    @FindBy(css = "[data-testid='add-to-favourites'].active, .fav-toggle.active, [aria-pressed='true']")
-//    private WebElement favouritesActiveState;
-
 
     public VOD_Detail_Page(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
@@ -31,13 +27,15 @@ public class VOD_Detail_Page {
         driver.get(url);
     }
 
-    public VOD_Detail_Page clickAddToFavoriteBtn() {
-        wait.until(ExpectedConditions.elementToBeClickable(addToFavoritesBtn)).click();
-        return this;
-    }
-
     public void clickAddToFavourites() {
         wait.until(ExpectedConditions.elementToBeClickable(addToFavoritesBtn)).click();
     }
+
+    public boolean isFavouriteSelected() {
+        wait.until(ExpectedConditions.visibilityOf(addToFavoritesBtn));
+        String ariaSelected = addToFavoritesBtn.getAttribute("aria-selected");
+        return "true".equalsIgnoreCase(ariaSelected);
+    }
+
 
 }

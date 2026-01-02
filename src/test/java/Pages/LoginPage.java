@@ -75,16 +75,16 @@ public class LoginPage {
     }
 
     public LoginPage clickDontAskAgain() {
-        wait.until(ExpectedConditions.visibilityOf(dontAskAgainBtn)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(dontAskAgainBtn)).click();
         return this;
     }
 
     public LoginPage clickoverlayCloseBtn1() {
-        wait.until(ExpectedConditions.visibilityOf(overlayCloseBtn1)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(overlayCloseBtn1)).click();        ;
         return this;
     }
     public LoginPage clickoverlayCloseBtn2() {
-        wait.until(ExpectedConditions.visibilityOf(overlayCloseBtn2)).click();
+        wait.until(ExpectedConditions.elementToBeClickable(overlayCloseBtn2)).click();        ;
         return this;
     }
 }
