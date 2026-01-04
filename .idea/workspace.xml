@@ -5,20 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="921c7c1b-5f99-465d-91ee-12beb355a03e" name="Changes" comment="small changes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/FreemiumFlows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/LogoutFlows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/Best_Modal_Overlay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/UserMenuComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/VOD_Detail_Page.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTCs/NGTVOTT_7311.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/InputData/CommonData.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/EPG_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/AuthHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/AuthHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Helper_Methods/UiHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Helper_Methods/UiHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/LoginPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/configFile/sharedDataConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/configFile/sharedDataConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/file_upload_selenium_java.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTCs/NGTVOTT_7311.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTCs/NGTVOTT_7311.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,120 +59,120 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "TestNG.Alerts.automationMethod2.executor": "Run",
-    "TestNG.Alerts.executor": "Run",
-    "TestNG.Alerts_Ref.automationMethod2.executor": "Run",
-    "TestNG.Alerts_Ref.executor": "Run",
-    "TestNG.Alerts_TestCase.automationMethod2.executor": "Run",
-    "TestNG.Browser_Windows.automationMethod2 (1).executor": "Run",
-    "TestNG.Browser_Windows.automationMethod2.executor": "Run",
-    "TestNG.Browser_Windows.automationMethod3.executor": "Run",
-    "TestNG.Browser_Windows.executor": "Run",
-    "TestNG.Browser_Windows_Ref.automationMethod3.executor": "Run",
-    "TestNG.Browser_Windows_Ref.executor": "Run",
-    "TestNG.C:/Users/ivulpe/AppData/Local/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml (1).executor": "Coverage",
-    "TestNG.C:/Users/ivulpe/AppData/Local/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml.executor": "Debug",
-    "TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/Suites/RegressionSuite.xml.executor": "Run",
-    "TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/Suites/SanitySuite.xml.executor": "Run",
-    "TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/Suites/SmokeSuite.xml.executor": "Run",
-    "TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/src/test/java/TestNG/testing.xml.executor": "Run",
-    "TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/src/test/java/TestNG/testng_pachete.xml.executor": "Run",
-    "TestNG.Elements_Buttons.automationMethod.executor": "Run",
-    "TestNG.Elements_Buttons.automationMethod4 (1).executor": "Debug",
-    "TestNG.Elements_Buttons.automationMethod4 (2).executor": "Run",
-    "TestNG.Elements_Buttons.automationMethod4.executor": "Run",
-    "TestNG.Elements_Buttons.executor": "Run",
-    "TestNG.Elements_RadioButton.automationMethod.executor": "Debug",
-    "TestNG.Elements_RadioButton.executor": "Run",
-    "TestNG.Elements_TextBox.automationMethod (1).executor": "Run",
-    "TestNG.Elements_TextBox.automationMethod.executor": "Run",
-    "TestNG.Elements_Upload_Download.automationMethod5 (1).executor": "Run",
-    "TestNG.Elements_Upload_Download.automationMethod5 (2).executor": "Run",
-    "TestNG.Elements_Upload_Download.automationMethod5 (3).executor": "Run",
-    "TestNG.Elements_Upload_Download.automationMethod5.executor": "Debug",
-    "TestNG.Elements_Upload_Download.executor": "Run",
-    "TestNG.Frames.automationMethod3 (1).executor": "Run",
-    "TestNG.Frames.automationMethod3.executor": "Run",
-    "TestNG.Frames_Ref.automationMethod3.executor": "Run",
-    "TestNG.Frames_Ref.executor": "Run",
-    "TestNG.Frames_TestCase.automationMethod3.executor": "Run",
-    "TestNG.GridView_Interactions_Sortable_Structuri_Repetitive.executor": "Run",
-    "TestNG.Interactions_Selectable_List.automationMethod (1).executor": "Run",
-    "TestNG.Interactions_Selectable_List.automationMethod.executor": "Run",
-    "TestNG.Interactions_Selectable_List.executor": "Run",
-    "TestNG.Interactions_Selectable_ListView_GridView.executor": "Run",
-    "TestNG.Interactions_Sortable.automationMethod.executor": "Run",
-    "TestNG.Interactions_Sortable.automationMethod1.executor": "Run",
-    "TestNG.Interactions_Sortable.executor": "Run",
-    "TestNG.Interactions_Sortable_GridView_Structuri_Repetitive.executor": "Run",
-    "TestNG.Interactions_Sortable_ListView_Structuri_Repetitive.executor": "Run",
-    "TestNG.Interactions_Sortable_Ref.automationMethod.executor": "Run",
-    "TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod (1).executor": "Run",
-    "TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod (2).executor": "Run",
-    "TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod.executor": "Run",
-    "TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod4.executor": "Run",
-    "TestNG.Interactions_Sortable_Structuri_Repetitive.executor": "Run",
-    "TestNG.Intermediate_Sessions.executor": "Run",
-    "TestNG.Login_Successful (1).executor": "Run",
-    "TestNG.Login_Successful.Login_Successful (1).executor": "Run",
-    "TestNG.Login_Successful.Login_Successful (2).executor": "Run",
-    "TestNG.Login_Successful.Login_Successful (3).executor": "Run",
-    "TestNG.Login_Successful.Login_Successful (4).executor": "Run",
-    "TestNG.Login_Successful.Login_Successful.executor": "Run",
-    "TestNG.Login_Successful.executor": "Run",
-    "TestNG.Login_Successful_TestCase (1).executor": "Run",
-    "TestNG.Login_Successful_TestCase.Login_Successful (1).executor": "Run",
-    "TestNG.Login_Successful_TestCase.Login_Successful.executor": "Run",
-    "TestNG.Login_Successful_TestCase.executor": "Run",
-    "TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode (1).executor": "Run",
-    "TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode.executor": "Run",
-    "TestNG.NGTVOTT_7311.executor": "Run",
-    "TestNG.NGTVOTT_7311_AddToFavorite.executor": "Run",
-    "TestNG.Post_login_Redirection_in_Freemium_Mode.Post_login_Redirection_in_Freemium_ModeTC.executor": "Run",
-    "TestNG.Post_login_Redirection_in_Freemium_Mode.executor": "Run",
-    "TestNG.Post_login_Redirection_in_Freemium_Mode.ost_login_Redirection_in_Freemium_ModeTC.executor": "Run",
-    "TestNG.PracriceForm_BeforeRefactoring.executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod (1).executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod (2).executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod (3).executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod.executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod1 (1).executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod1 (2).executor": "Run",
-    "TestNG.PracticeForm_Test.automationMethod1.executor": "Run",
-    "TestNG.PracticeForm_Test.executor": "Run",
-    "TestNG.PracticeForm_TestRef.automationMethod1.executor": "Debug",
-    "TestNG.PracticeForm_TestRef.executor": "Debug",
-    "TestNG.PracticeForm_Test_Ref.automationMethod1.executor": "Run",
-    "TestNG.PracticeForm_Test_Ref.executor": "Debug",
-    "TestNG.Structuri_Repetitive.automationMethod4.executor": "Run",
-    "TestNG.WebTable_Test.automationMethod (1).executor": "Run",
-    "TestNG.WebTable_Test.automationMethod (2).executor": "Run",
-    "TestNG.WebTable_Test.automationMethod (3).executor": "Run",
-    "TestNG.WebTable_Test.automationMethod (4).executor": "Run",
-    "TestNG.WebTable_Test.automationMethod (5).executor": "Run",
-    "TestNG.WebTable_Test.automationMethod.executor": "Run",
-    "TestNG.WebTable_Test.executor": "Run",
-    "TestNG.WebTable_Test_Ref.automationMethod (1).executor": "Run",
-    "TestNG.WebTable_Test_Ref.automationMethod (2).executor": "Run",
-    "TestNG.WebTable_Test_Ref.automationMethod.executor": "Run",
-    "TestNG.WebTable_Test_Ref.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ivulpe/OneDrive - ENDAVA/Desktop/IdeaProjects/MagentaTV",
-    "onboarding.tips.debug.path": "C:/Users/ivulpe/IdeaProjects/SeleniumProject2/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;TestNG.Alerts.automationMethod2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Alerts.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Alerts_Ref.automationMethod2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Alerts_Ref.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Alerts_TestCase.automationMethod2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Browser_Windows.automationMethod2 (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Browser_Windows.automationMethod2.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Browser_Windows.automationMethod3.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Browser_Windows.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Browser_Windows_Ref.automationMethod3.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Browser_Windows_Ref.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/ivulpe/AppData/Local/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml (1).executor&quot;: &quot;Coverage&quot;,
+    &quot;TestNG.C:/Users/ivulpe/AppData/Local/JetBrains/IdeaIC2025.1/temp-testng-customsuite.xml.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/Suites/RegressionSuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/Suites/SanitySuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/Suites/SmokeSuite.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/src/test/java/TestNG/testing.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.C:/Users/ivulpe/IdeaProjects/SeleniumProject2/src/test/java/TestNG/testng_pachete.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Buttons.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Buttons.automationMethod4 (1).executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.Elements_Buttons.automationMethod4 (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Buttons.automationMethod4.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Buttons.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_RadioButton.automationMethod.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.Elements_RadioButton.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_TextBox.automationMethod (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_TextBox.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Upload_Download.automationMethod5 (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Upload_Download.automationMethod5 (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Upload_Download.automationMethod5 (3).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Elements_Upload_Download.automationMethod5.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.Elements_Upload_Download.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames.automationMethod3 (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames.automationMethod3.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames_Ref.automationMethod3.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames_Ref.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Frames_TestCase.automationMethod3.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.GridView_Interactions_Sortable_Structuri_Repetitive.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Selectable_List.automationMethod (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Selectable_List.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Selectable_List.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Selectable_ListView_GridView.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable.automationMethod1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_GridView_Structuri_Repetitive.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_ListView_Structuri_Repetitive.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_Ref.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_Structuri_Repetitive.automationMethod4.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Interactions_Sortable_Structuri_Repetitive.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Intermediate_Sessions.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful.Login_Successful (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful.Login_Successful (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful.Login_Successful (3).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful.Login_Successful (4).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful.Login_Successful.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful_TestCase (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful_TestCase.Login_Successful (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful_TestCase.Login_Successful.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Login_Successful_TestCase.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.NGTVOTT_7311.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.NGTVOTT_7311_AddToFavorite.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Post_login_Redirection_in_Freemium_Mode.Post_login_Redirection_in_Freemium_ModeTC.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Post_login_Redirection_in_Freemium_Mode.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.Post_login_Redirection_in_Freemium_Mode.ost_login_Redirection_in_Freemium_ModeTC.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracriceForm_BeforeRefactoring.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod (3).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod1 (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod1 (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.automationMethod1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_TestRef.automationMethod1.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.PracticeForm_TestRef.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.PracticeForm_Test_Ref.automationMethod1.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.PracticeForm_Test_Ref.executor&quot;: &quot;Debug&quot;,
+    &quot;TestNG.Structuri_Repetitive.automationMethod4.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.automationMethod (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.automationMethod (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.automationMethod (3).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.automationMethod (4).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.automationMethod (5).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test_Ref.automationMethod (1).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test_Ref.automationMethod (2).executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test_Ref.automationMethod.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.WebTable_Test_Ref.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ivulpe/OneDrive - ENDAVA/Desktop/IdeaProjects/MagentaTV&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/ivulpe/IdeaProjects/SeleniumProject2/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ivulpe\IdeaProjects\SeleniumProject2\.github\workflows" />
@@ -200,7 +190,7 @@
       <recent name="Intermediate_Sessions" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode">
+  <component name="RunManager" selected="TestNG.NGTVOTT_7311">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -336,8 +326,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.NGTVOTT_7311" />
         <item itemvalue="TestNG.NGTVOTT_7311.Post_login_Redirection_in_Freemium_Mode" />
-        <item itemvalue="TestNG.NGTVOTT_7311_AddToFavorite" />
         <item itemvalue="TestNG.NGTVOTT_7311_AddToFavorite.Post_login_Redirection_in_Freemium_Mode" />
         <item itemvalue="TestNG.Login_Successful_TestCase.Login_Successful" />
         <item itemvalue="TestNG.Login_Successful_TestCase (1)" />

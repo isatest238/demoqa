@@ -1,6 +1,5 @@
 package Pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,6 +21,9 @@ public class HomePage {
     // Freemium indicator 2: “KOSTENLOS & OHNE LOGIN:” text lane visible
     @FindBy(xpath = "//h2[span='KOSTENLOS & OHNE LOGIN:']")
     private WebElement kostenlosOhneLoginLabel;
+
+    @FindBy(xpath = "//i[@class='HaBBq Lr3Xn PkFw7']")
+    private WebElement epgIcon;
 
     public HomePage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
@@ -45,5 +47,9 @@ public class HomePage {
         return wait.until(ExpectedConditions.visibilityOf(kostenlosOhneLoginLabel)).getText().trim();
     }
 
-
+    public HomePage clickEPgIcon() {
+        wait.until(ExpectedConditions.elementToBeClickable(epgIcon)).click();
+        ;
+        return this;
+    }
 }
