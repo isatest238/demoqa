@@ -31,15 +31,19 @@ public class Hooks extends Shared_Data {
 
     @AfterMethod
     public void clearEnvironment(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            String errorMessage = result.getThrowable().getMessage();
-            Logger_Utility.errorLog(errorMessage);
-            Extent_Utility.attachLog(testName, errorMessage, getDriver());
+        try {
+            if (result.getStatus() == ITestResult.FAILURE) {
+                String errorMessage = result.getThrowable() != null
+                        ? result.getThrowable().getMessage()
+                        : "Test failed (no throwable message)";
+                Logger_Utility.errorLog(errorMessage);
+                Extent_Utility.attachLog(testName, errorMessage, getDriver());
+            }
+        } finally {
+            clearBrowser();
+            Logger_Utility.endTestCase(testName);
+            Extent_Utility.finishTest(testName);
         }
-        clearBrowser();
-        //pentru moment toate sunt bune
-        Logger_Utility.endTestCase(testName);
-        Extent_Utility.finishTest(testName);
     }
 
     @AfterSuite

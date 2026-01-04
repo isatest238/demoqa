@@ -8,9 +8,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 
 import java.io.File;
 import java.io.IOException;
@@ -69,26 +68,38 @@ public class Extent_Utility {
 
     // metoda care sa faca un screenshot
     public static synchronized void attachLog (String reportName, String message, WebDriver driver){
-    String threadName = Thread.currentThread().getName();
-    context.get(threadName)
-            .fail(message, MediaEntityBuilder.createScreenCaptureFromBase64String(getScreenshot(driver, reportName))
-                    .build());
+        String threadName = Thread.currentThread().getName();
 
+        String base64 = getScreenshot(driver, reportName);
+        if (base64 != null) {
+            context.get(threadName).fail(
+                    message,
+                    MediaEntityBuilder.createScreenCaptureFromBase64String(base64).build()
+            );
+        } else {
+            context.get(threadName).fail(message + " (Screenshot skipped)");
+        }
     }
 
     private static String getScreenshot(WebDriver driver, String reportName){
-        try{
-            String path = pathToProject+reportName+".png";
+        try {
+            if (driver == null) return null;
+
+            String path = pathToProject + reportName + ".png";
             File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            FileUtils.copyFile(src,new File(path));
+            FileUtils.copyFile(src, new File(path));
+
             byte[] imageBytes = IOUtils.toByteArray(Files.newInputStream(Paths.get(path)));
             return Base64.getEncoder().encodeToString(imageBytes);
 
+        } catch (WebDriverException e) {
+            System.out.println("Skip screenshot (WebDriver error): " + e.getMessage());
+            return null;
+
+        } catch (IOException e) {
+            System.out.println("Screenshot IO error: " + e.getMessage());
+            return null;
         }
-       catch (IOException exception){
-           System.out.println("The path is not correct");
-       }
-        return null;
     }
 
     // metoda care sa genereze raportul final

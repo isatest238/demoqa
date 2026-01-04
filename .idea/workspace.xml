@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="921c7c1b-5f99-465d-91ee-12beb355a03e" name="Changes" comment="small changes">
-      <change afterPath="$PROJECT_DIR$/src/test/java/Pages/EPG_Page.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExtentUtility/Extent_Utility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExtentUtility/Extent_Utility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Pages/EPG_Page.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Pages/EPG_Page.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Shared_Data/Hooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Shared_Data/Hooks.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/LoginTCs/NGTVOTT_7311.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginTCs/NGTVOTT_7311.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

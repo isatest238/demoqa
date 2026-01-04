@@ -47,7 +47,7 @@ public class HomePage {
         return wait.until(ExpectedConditions.visibilityOf(kostenlosOhneLoginLabel)).getText().trim();
     }
 
-    public HomePage clickEPgIcon() {
+    public HomePage clickEpgIcon() {
         wait.until(ExpectedConditions.elementToBeClickable(epgIcon)).click();
         ;
         return this;
