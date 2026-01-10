@@ -1,5 +1,6 @@
 package Pages;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,11 +10,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class VOD_Detail_Page {
 
+    @Getter
     private WebDriver driver;
+    @Getter
     private WebDriverWait wait;
 
     // BUTON / ICON add to favourites
-    @FindBy(id = "PIN")
+    //@FindBy(id = "PIN")
+    @FindBy(xpath = "//button[@id='PIN' and .//span[normalize-space()='Merken']]")
     private WebElement addToFavoritesBtn;
 
 
@@ -28,7 +32,9 @@ public class VOD_Detail_Page {
     }
 
     public void clickAddToFavourites() {
+        // dacă apare, așteaptă să dispară
         wait.until(ExpectedConditions.elementToBeClickable(addToFavoritesBtn)).click();
+
     }
 
     public boolean isFavouriteSelected() {

@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class Shared_Data {
 
-    private WebDriver driver;
+    public WebDriver driver;
     private WebDriverWait wait;
 
     //@BeforeMethod

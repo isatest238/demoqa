@@ -1,5 +1,6 @@
 package Pages;
 
+import lombok.Getter;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -9,7 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Best_Modal_Overlay {
 
+    @Getter
     private WebDriver driver;
+    @Getter
     private WebDriverWait wait;
 
     @FindBy(xpath = "//*[@id='OVERLAY-BUTTON']//a[@title='Login']")

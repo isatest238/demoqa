@@ -8,8 +8,8 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.lang.reflect.Method;
+import java.util.Arrays;
 
 public class Hooks extends Shared_Data {
 
@@ -21,13 +21,21 @@ public class Hooks extends Shared_Data {
     }
 
     @BeforeMethod
-    public void prepareEnvironment() {
-        testName = this.getClass().getSimpleName();
+    //public void prepareEnvironment() {
+    public void prepareEnvironment(Method method, Object[] testData) {
+        String className = this.getClass().getSimpleName();
+        String methodName = method.getName();
+
+        String params = (testData != null && testData.length > 0)
+                ? Arrays.toString(testData)
+                : "";
+
+        testName = className + "." + methodName + (params.isEmpty() ? "" : " " + params);
+
         Logger_Utility.startTestCase(testName);
         Extent_Utility.createTest(testName);
         prepareBrowser();
     }
-
 
     @AfterMethod
     public void clearEnvironment(ITestResult result) {

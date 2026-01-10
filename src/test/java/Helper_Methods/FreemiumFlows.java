@@ -2,7 +2,6 @@ package Helper_Methods;
 import ExtentUtility.Extent_Utility;
 import ExtentUtility.Report_Step;
 import Logger.Logger_Utility;
-import Pages.Best_Modal_Overlay;
 import Pages.HomePage;
 import Pages.LoginPage;
 import org.openqa.selenium.WebDriver;
@@ -47,38 +46,5 @@ public class FreemiumFlows {
 
     }
 
-    public void loginFromOverlay(Map<String, String> data) {
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Login from overlay started");
-        Logger_Utility.infoLog("Login from overlay started");
 
-        Best_Modal_Overlay overlay = new Best_Modal_Overlay(driver, wait);
-        LoginPage loginPage = new LoginPage(driver, wait);
-
-        overlay.clickLogin();
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Clicked Login on overlay");
-        Logger_Utility.infoLog("Clicked Login on overlay");
-
-        loginPage.enterUserInput(data.get("loginUser"));
-        loginPage.clickNext();
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Inserted username and clicked Next");
-        Logger_Utility.infoLog("Inserted username and clicked Next");
-
-        loginPage.enterPassword(data.get("loginPass"));
-        loginPage.submitLogin();
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Inserted password and submitted");
-        Logger_Utility.infoLog("Inserted password and submitted");
-
-        loginPage.clickDontAskAgain();
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Clicked Don't ask again");
-        Logger_Utility.infoLog("Clicked Don't ask again");
-
-        loginPage.clickoverlayCloseBtn1();
-        loginPage.clickoverlayCloseBtn2();
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Closed overlays");
-        Logger_Utility.infoLog("Closed overlays");
-
-        Extent_Utility.attachLog(Report_Step.INFO_STEP, "Login from overlay finished");
-        Logger_Utility.infoLog("Login from overlay finished");
-
-      }
 }
